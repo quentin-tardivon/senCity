@@ -9,6 +9,9 @@ public class Stats {
 	
 	public static String trouve(String name, String valeur, String fichier) {
 		String StrtoFile = "./" + fichier;
+		String normalizeName = name.toLowerCase().replace(" ","");
+		String normalizeValeur = valeur.toLowerCase().replace(" ","");
+		String result = "";
 		try {
 			int toFound = 0;
 			Scanner SLine = new Scanner (new FileReader(new File(StrtoFile)));
@@ -18,28 +21,28 @@ public class Stats {
 			SElement.useDelimiter(",");
 			while(SElement.hasNext()) {
 				String test = SElement.next().toLowerCase().trim();
-				System.out.println(test);
-				if (test.equals(name)) {
+				if (test.equals(normalizeName)) {
 					break;
 				}
 				else {
 					toFound +=1;
 				}	
 			}
-			
-			System.out.println(toFound);
+
 			while(SLine.hasNextLine()) {
 				String nextLine = SLine.nextLine();
 				SElement = new Scanner(nextLine);
-				for (int i = 0; i < toFound-1; i++) {
+				SElement.useDelimiter(",");
+				for (int i = 0; i < toFound; i++) {
 					SElement.next();
 				}
-				if (SElement.next() == valeur) {
-					return nextLine;
+				String element = SElement.next().toLowerCase().replace(" ","");
+				if (element.equals(normalizeValeur)) {
+					result = result + "\n" + nextLine;
 				}
 			}
 			
-			return "Not Found";
+			return result;
 				
 		}
 		catch(FileNotFoundException excep) {
