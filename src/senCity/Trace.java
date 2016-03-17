@@ -1,7 +1,8 @@
 package senCity;
 
 /**
- * Created by quentin on 16/03/16.
+ * Created by Quentin TARDIVON
+ * Extrait un Timestamp, un SSID et la puissance du Signal d'un fichier
  */
 public class Trace {
     protected String ts;

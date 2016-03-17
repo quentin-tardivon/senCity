@@ -8,7 +8,8 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 /**
- * Created by quentin on 16/03/16.
+ * Created by Quentin TARDIVON
+ * Contient une liste de Trace
  */
 public class Traces {
     LinkedList<Trace> listeTrace;
@@ -17,13 +18,22 @@ public class Traces {
         this.listeTrace = new LinkedList<>();
     }
 
+    /**
+     * Ajoute une trace à la liste
+     * @param trace la trace à ajouter
+     */
     public void ajouter(Trace trace) {
         this.listeTrace.add(trace);
     }
 
+    /**
+     *
+     * @return la taille de la liste de trace
+     */
     public int taille() {
         return this.listeTrace.size();
     }
+
 
     public String toString() {
         String result = "";
@@ -33,6 +43,11 @@ public class Traces {
         return result;
     }
 
+    /**
+     * Charge un fichier et rempli une liste de trace avec les trace trouvées
+     * @param nomFichier le nom du fichier à trouver
+     * @throws IOException Si le fichier est introuvable (Ici, il doit se trouver à la racine
+     */
     public void load(String nomFichier) throws IOException {
         String StrtoFile = "./" + nomFichier;
         Scanner SLine = new Scanner (new FileReader(new File(StrtoFile)));
@@ -54,6 +69,11 @@ public class Traces {
 
     }
 
+    /**
+     * Sauvegarde une liste de trace dans un fichier (toString les affiches dans le bon format, il n'y a qu'à enregistrer
+     * @param nomFichier où enregistrer
+     * @throws IOException si il est impossible d'écrire dans le fichier
+     */
     public void save(String nomFichier) throws IOException {
         FileWriter writer = new FileWriter("./"+ nomFichier);
 
@@ -62,6 +82,10 @@ public class Traces {
         writer.close();
     }
 
+    /**
+     * Est appelée ici sans arguments
+     * @param args
+     */
     public static void main(String[] args) {
         Traces traces = new Traces();
         Trace trace1 = new Trace("123456", "eduroam", 23);

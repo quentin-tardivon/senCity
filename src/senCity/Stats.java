@@ -5,8 +5,19 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Scanner;
 
+/**
+ * Created by Quentin TARDIVON
+ * Test la lecture de fichier
+ */
 public class Stats {
-	
+
+	/**
+	 *
+	 * @param name nom de la variable à analyser
+	 * @param valeur valeur de la variable à trouver
+	 * @param fichier fichier dans lequel chercher
+     * @return Soit une valeur erreur, soit la totalité des valeurs correspondantes
+     */
 	public static String trouve(String name, String valeur, String fichier) {
 		String StrtoFile = "./" + fichier;
 		String normalizeName = name.toLowerCase().replace(" ","");
@@ -51,7 +62,11 @@ public class Stats {
 		
 		
 	}
-	
+
+	/**
+	 *
+	 * @param args timestamp 1438174357035008615 capture_wifi.csv  ou SSID Universite" "de" "Lorraine capture_wifi.csv
+     */
 	public static void main(String[] args) {
 		System.out.println(trouve(args[0], args[1], args[2]));
 	}
