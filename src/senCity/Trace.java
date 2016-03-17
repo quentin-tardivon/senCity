@@ -16,7 +16,7 @@ public class Trace {
 
     public String toString() {
         String result;
-        result = ts + ", " + ssid +", " + signal;
+        result = ts + " " + ssid +" " + signal;
         return result;
     }
 

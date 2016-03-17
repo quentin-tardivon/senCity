@@ -1,7 +1,11 @@
 package senCity;
 
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.LinkedList;
+import java.util.Scanner;
 
 /**
  * Created by quentin on 16/03/16.
@@ -30,7 +34,32 @@ public class Traces {
     }
 
     public void load(String nomFichier) throws IOException {
-        //TO DO
+        String StrtoFile = "./" + nomFichier;
+        Scanner SLine = new Scanner (new FileReader(new File(StrtoFile)));
+        SLine.nextLine();
+        while (SLine.hasNextLine()) {
+            Scanner SElement = new Scanner(SLine.nextLine());
+            SElement.useDelimiter(",");
+            String ts = SElement.next();
+            SElement.next();
+            String ssid = SElement.next();
+            SElement.next();
+            SElement.next();
+            Integer signal = 0;
+            signal = signal.parseInt(SElement.next());
+            this.ajouter(new Trace(ts, ssid, signal));
+            SElement.close();
+        }
+        SLine.close();
+
+    }
+
+    public void save(String nomFichier) throws IOException {
+        FileWriter writer = new FileWriter("./"+ nomFichier);
+
+        writer.write(this.toString());
+
+        writer.close();
     }
 
     public static void main(String[] args) {
@@ -42,5 +71,24 @@ public class Traces {
         traces.ajouter(trace2);
         traces.ajouter(trace3);
         System.out.println(traces.toString());
+
+        Traces trace_capture = new Traces();
+        try {
+            trace_capture.load("capture_wifi.csv");
+            System.out.println(trace_capture.toString());
+
+            try {
+                trace_capture.save("test_sauvegarde");
+                System.out.println("Save!");
+            }
+            catch (IOException exception) {
+                System.out.println("Impossible de créer le fichier");
+            }
+        }
+        catch(IOException exception) {
+            System.out.println("Fichier introuvable");
+        }
+
+
     }
 }
