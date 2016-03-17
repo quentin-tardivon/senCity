@@ -1,0 +1,17 @@
+Trace -- Traces
+
+class Trace {
+String ts
+String ssid
+int signal
+Trace(String ts, String ssid, int signal)
+}
+
+class Traces{
+LinkedList<Trace> listeTrace
+Trace()
+void ajouterTrace(Trace trace)
+String toString()
+void save(String fileName)
+void load(String fileName)
+}
