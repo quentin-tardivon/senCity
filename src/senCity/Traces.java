@@ -4,19 +4,15 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.LinkedList;
+import java.util.Collection;
 import java.util.Scanner;
 
 /**
- * Created by Quentin TARDIVON
- * Contient une liste de Trace
+ * Created by quentin on 21/03/16.
  */
-public class Traces {
-    LinkedList<Trace> listeTrace;
+public abstract class Traces {
 
-    public Traces() {
-        this.listeTrace = new LinkedList<>();
-    }
+    Collection<Trace> listeTrace;
 
     /**
      * Ajoute une trace à la liste
@@ -36,11 +32,7 @@ public class Traces {
 
 
     public String toString() {
-        String result = "";
-        for(int i = 0; i<this.taille(); i++) {
-            result = result + "\n" + this.listeTrace.get(i).toString();
-        }
-        return result;
+        return ""+this.listeTrace;
     }
 
     /**
@@ -82,37 +74,6 @@ public class Traces {
         writer.close();
     }
 
-    /**
-     * Est appelée ici sans arguments
-     * @param args
-     */
-    public static void main(String[] args) {
-        Traces traces = new Traces();
-        Trace trace1 = new Trace("123456", "eduroam", 23);
-        Trace trace2 = new Trace("123456", "lolilo", 23);
-        Trace trace3 = new Trace("123456", "yolooo", 23);
-        traces.ajouter(trace1);
-        traces.ajouter(trace2);
-        traces.ajouter(trace3);
-        System.out.println(traces.toString());
+    public abstract Collection<Trace> initialiser();
 
-        Traces trace_capture = new Traces();
-        try {
-            trace_capture.load("capture_wifi.csv");
-            System.out.println(trace_capture.toString());
-
-            try {
-                trace_capture.save("test_sauvegarde");
-                System.out.println("Save!");
-            }
-            catch (IOException exception) {
-                System.out.println("Impossible de créer le fichier");
-            }
-        }
-        catch(IOException exception) {
-            System.out.println("Fichier introuvable");
-        }
-
-
-    }
 }
