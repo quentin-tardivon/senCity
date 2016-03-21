@@ -32,7 +32,7 @@ public abstract class Traces {
 
 
     public String toString() {
-        return ""+this.listeTrace;
+        return listeTrace.toString();
     }
 
     /**

@@ -13,23 +13,16 @@ import java.util.Scanner;
  * Contient une liste de Trace
  */
 public class LinkedListTraces extends Traces{
-    LinkedList<Trace> listeTrace = new LinkedList<Trace>();
+
 
     public LinkedListTraces() {
+        initialiser();
     }
 
     @Override
     public Collection<Trace> initialiser() {
+        listeTrace = new LinkedList<>();
         return listeTrace;
-    }
-
-
-    /**
-     * Ajoute une trace à la liste
-     * @param trace la trace à ajouter
-     */
-    public void ajouter(Trace trace) {
-        this.listeTrace.add(trace);
     }
 
     /**
