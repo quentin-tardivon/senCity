@@ -42,11 +42,13 @@ public class LinkedListTraces extends Traces{
         LinkedListTraces trace_capture = new LinkedListTraces();
         try {
             trace_capture.load("capture_wifi.csv");
+            long freem = Runtime.getRuntime().freeMemory();
             System.out.println(trace_capture.toString());
 
             try {
                 trace_capture.save("test_sauvegarde");
                 System.out.println("Save!");
+                System.out.println(freem);
             }
             catch (IOException exception) {
                 System.out.println("Impossible de créer le fichier");
