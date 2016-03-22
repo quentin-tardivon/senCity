@@ -48,6 +48,7 @@ public abstract class Traces {
             Scanner SElement = new Scanner(SLine.nextLine());
             SElement.useDelimiter(",");
             String ts = SElement.next();
+            ts = ts.substring(0,10); //Récupération des 10 premiers caractères de ts
             SElement.next();
             String ssid = SElement.next();
             SElement.next();

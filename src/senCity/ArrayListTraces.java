@@ -31,6 +31,16 @@ public class ArrayListTraces extends Traces{
         this.listeTrace.add(trace);
     }
 
+
+    @Override
+    public String toString() {
+        String result = "";
+        for (int i =0; i<listeTrace.size();i++) {
+            result = result + listeTrace.get(i).toString()+"\n";
+        }
+        return result;
+    } //Tentative de récupérer l'ancien toString
+
     /**
      * Est appelée ici sans arguments
      * @param args
