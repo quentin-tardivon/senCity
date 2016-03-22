@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.Scanner;
 
 /**
@@ -32,7 +33,14 @@ public abstract class Traces {
 
 
     public String toString() {
-        return listeTrace.toString();
+        String result = "";
+        Iterator itera = this.listeTrace.iterator();
+        for(int i = 0; i<this.taille(); i++) {
+            while (itera.hasNext()) {
+                result = result + "\n" + itera.next().toString();
+            }
+        }
+        return result;
     }
 
     /**

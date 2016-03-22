@@ -1,26 +1,22 @@
 package senCity;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Scanner;
+
 
 /**
  * Created by Quentin TARDIVON
  * Contient une liste de Trace
  */
 public class ArrayListTraces extends Traces{
-    ArrayList<Trace> listeTrace = new ArrayList<>();
 
     public ArrayListTraces() {
     }
 
     @Override
     public Collection<Trace> initialiser() {
-        return this.listeTrace;
+        return new ArrayList<>();
     }
 
     /**
@@ -31,15 +27,6 @@ public class ArrayListTraces extends Traces{
         this.listeTrace.add(trace);
     }
 
-
-    @Override
-    public String toString() {
-        String result = "";
-        for (int i =0; i<listeTrace.size();i++) {
-            result = result + listeTrace.get(i).toString()+"\n";
-        }
-        return result;
-    } //Tentative de récupérer l'ancien toString
 
     /**
      * Est appelée ici sans arguments

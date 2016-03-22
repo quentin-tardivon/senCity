@@ -25,7 +25,6 @@ public class LinkedListTraces extends Traces{
         return listeTrace;
     }
 
-
     /**
      * Est appelée ici sans arguments
      * @param args
