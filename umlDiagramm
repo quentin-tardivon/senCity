@@ -1,4 +1,6 @@
 Trace -- Traces
+ArrayListTrace <|-- Traces
+LinkedListTrace <|-- Traces
 
 class Trace {
 String ts
@@ -14,4 +16,14 @@ void ajouterTrace(Trace trace)
 String toString()
 void save(String fileName)
 void load(String fileName)
+}
+
+class ArrayListTrace {
+ArrayListTraces()
+initialiser() Collection<Trace>
+}
+
+class LinkedListTrace {
+LinkedListTrace()
+initialiser() Collection<Trace>
 }

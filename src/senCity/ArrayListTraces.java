@@ -20,15 +20,6 @@ public class ArrayListTraces extends Traces{
     }
 
     /**
-     * Ajoute une trace à la liste
-     * @param trace la trace à ajouter
-     */
-    public void ajouter(Trace trace) {
-        this.listeTrace.add(trace);
-    }
-
-
-    /**
      * Est appelée ici sans arguments
      * @param args
      */
