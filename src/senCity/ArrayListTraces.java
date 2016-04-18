@@ -12,11 +12,13 @@ import java.util.Collection;
 public class ArrayListTraces extends Traces{
 
     public ArrayListTraces() {
+        initialiser();
     }
 
     @Override
     public Collection<Trace> initialiser() {
-        return new ArrayList<>();
+        listeTrace = new ArrayList<>();
+        return listeTrace;
     }
 
     /**
@@ -24,16 +26,16 @@ public class ArrayListTraces extends Traces{
      * @param args
      */
     public static void main(String[] args) {
-        LinkedListTraces linkedListTraces = new LinkedListTraces();
+        ArrayListTraces arrayListTraces = new ArrayListTraces();
         Trace trace1 = new Trace("123456", "eduroam", 23);
         Trace trace2 = new Trace("123456", "lolilo", 23);
         Trace trace3 = new Trace("123456", "yolooo", 23);
-        linkedListTraces.ajouter(trace1);
-        linkedListTraces.ajouter(trace2);
-        linkedListTraces.ajouter(trace3);
-        System.out.println(linkedListTraces.toString());
+        arrayListTraces.ajouter(trace1);
+        arrayListTraces.ajouter(trace2);
+        arrayListTraces.ajouter(trace3);
+        System.out.println(arrayListTraces.toString());
 
-        LinkedListTraces trace_capture = new LinkedListTraces();
+        ArrayListTraces trace_capture = new ArrayListTraces();
         try {
             trace_capture.load("capture_wifi.csv");
             long freem = Runtime.getRuntime().freeMemory();
