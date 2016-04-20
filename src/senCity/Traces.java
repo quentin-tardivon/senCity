@@ -45,29 +45,65 @@ public abstract class Traces {
 
     /**
      * Charge un fichier et rempli une liste de trace avec les trace trouvées
-     * @param nomFichier le nom du fichier à trouver
+     * @param wifiFile le nom du fichier wifi à trouver
+     * @param gpsFile le nom du fichier gps à trouver
      * @throws IOException Si le fichier est introuvable (Ici, il doit se trouver à la racine
      */
-    public void load(String nomFichier) throws IOException {
-        String StrtoFile = "./" + nomFichier;
-        Scanner SLine = new Scanner (new FileReader(new File(StrtoFile)));
-        SLine.nextLine();
-        while (SLine.hasNextLine()) {
-            Scanner SElement = new Scanner(SLine.nextLine());
-            SElement.useDelimiter(",");
-            String ts = SElement.next();
-            ts = ts.substring(0,10); //Récupération des 10 premiers caractères de ts
-            SElement.next();
-            String ssid = SElement.next();
-            SElement.next();
-            SElement.next();
-            Integer signal = 0;
-            signal = signal.parseInt(SElement.next());
-            this.ajouter(new Trace(ts, ssid, signal));
-            SElement.close();
-        }
-        SLine.close();
+    public void load(String wifiFile, String gpsFile, Double seuil) throws IOException {
+        int nbAna = 0;
+        int nbReal = 0;
+        String StrtoWifiFile = "./" + wifiFile;
+        String StrtoGPSFile = "./" + gpsFile;
+        Scanner SLineWifi = new Scanner (new FileReader(new File(StrtoWifiFile)));
+        SLineWifi.nextLine();
+        nbAna +=1;
 
+        while (SLineWifi.hasNextLine()) {
+
+            Scanner SElementWifi = new Scanner(SLineWifi.nextLine());
+            nbAna+=1;
+            SElementWifi.useDelimiter(",");
+            String ts = SElementWifi.next();
+            ts = ts.substring(0,10); //Récupération des 10 premiers caractères de ts
+            SElementWifi.next();
+            String ssid = SElementWifi.next();
+            SElementWifi.next();
+            SElementWifi.next();
+            Integer signal = 0;
+            signal = signal.parseInt(SElementWifi.next());
+
+            if (!ssid.equals("<hidden>")) {
+                Scanner SLineGPS = new Scanner (new FileReader(new File(StrtoGPSFile)));
+                SLineGPS.nextLine();
+                while (SLineGPS.hasNextLine()) {
+
+                    Scanner SElementGPS = new Scanner(SLineGPS.nextLine());
+                    SElementGPS.useDelimiter(",");
+                    String tsGPS = SElementGPS.next();
+                    tsGPS = tsGPS.substring(0,10); //Récupération des 10 premiers caractères de ts
+                    if (tsGPS.equals(ts)) {
+                        String lati = SElementGPS.next();
+                        String longi = SElementGPS.next();
+                        Double finalLati = Double.parseDouble(lati);
+                        Double finalLongi = Double.parseDouble(longi);
+                        GPS coord = new GPS(finalLati, finalLongi);
+                        this.ajouter(new Trace(ts, ssid, signal,coord));
+                        nbReal+=1;
+                        break;
+                    }
+                    SElementGPS.close();
+                }
+                SLineGPS.close();
+
+            }
+
+            SElementWifi.close();
+        }
+        SLineWifi.close();
+        System.out.println(nbReal);
+        if (nbReal/nbAna * 100 < seuil) {
+            throw new IOException();
+        }
     }
 
     /**
