@@ -11,7 +11,7 @@ import java.util.Scanner;
 /**
  * Created by quentin on 21/03/16.
  */
-public abstract class Traces {
+public abstract class Traces implements Iterable<Trace> {
 
     Collection<Trace> listeTrace;
 
@@ -49,19 +49,19 @@ public abstract class Traces {
      * @param gpsFile le nom du fichier gps à trouver
      * @throws IOException Si le fichier est introuvable (Ici, il doit se trouver à la racine
      */
-    public void load(String wifiFile, String gpsFile, Double seuil) throws IOException {
-        int nbAna = 0;
-        int nbReal = 0;
+    public double load(String wifiFile, String gpsFile, Double seuil) throws IOException {
+        double nbTotal = 0;
+        double nbReal = 0;
         String StrtoWifiFile = "./" + wifiFile;
         String StrtoGPSFile = "./" + gpsFile;
         Scanner SLineWifi = new Scanner (new FileReader(new File(StrtoWifiFile)));
         SLineWifi.nextLine();
-        nbAna +=1;
+
 
         while (SLineWifi.hasNextLine()) {
 
             Scanner SElementWifi = new Scanner(SLineWifi.nextLine());
-            nbAna+=1;
+            nbTotal+=1.0;
             SElementWifi.useDelimiter(",");
             String ts = SElementWifi.next();
             ts = ts.substring(0,10); //Récupération des 10 premiers caractères de ts
@@ -88,7 +88,7 @@ public abstract class Traces {
                         Double finalLongi = Double.parseDouble(longi);
                         GPS coord = new GPS(finalLati, finalLongi);
                         this.ajouter(new Trace(ts, ssid, signal,coord));
-                        nbReal+=1;
+                        nbReal+=1.0;
                         break;
                     }
                     SElementGPS.close();
@@ -100,8 +100,7 @@ public abstract class Traces {
             SElementWifi.close();
         }
         SLineWifi.close();
-        System.out.println(nbReal);
-        if (nbReal/nbAna * 100 < seuil) {
+        if (((nbTotal - nbReal)/nbTotal) * 100 > seuil) {
             throw new IOException();
         }
     }
@@ -120,5 +119,10 @@ public abstract class Traces {
     }
 
     public abstract Collection<Trace> initialiser();
+
+    @Override
+    public Iterator<Trace> iterator() {
+        return ; //TO DO
+    }
 
 }
