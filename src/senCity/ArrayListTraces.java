@@ -38,9 +38,9 @@ public class ArrayListTraces extends Traces{
         ArrayListTraces trace_capture = new ArrayListTraces();
         double time = System.currentTimeMillis();
         try {
-            double test = trace_capture.load("capture_wifi.csv","capture_gps.csv",20.0);
+            trace_capture.load("capture_wifi.csv","capture_gps.csv",20.0);
             long freem = Runtime.getRuntime().freeMemory();
-            System.out.println(trace_capture.toString());
+            //System.out.println(trace_capture.toString());
 
             try {
                 trace_capture.save("test_sauvegarde");
@@ -48,7 +48,7 @@ public class ArrayListTraces extends Traces{
                 System.out.println(freem);
                 time = System.currentTimeMillis() - time;
                 System.out.println("Time=" + time);
-                System.out.println(test);
+                //for (Trace t: trace_capture) { System.out.println(t) ;}
             }
             catch (IOException exception) {
                 System.out.println("Impossible de créer le fichier ou trop de donnée perdue");

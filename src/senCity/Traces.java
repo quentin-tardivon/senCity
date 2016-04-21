@@ -49,7 +49,7 @@ public abstract class Traces implements Iterable<Trace> {
      * @param gpsFile le nom du fichier gps à trouver
      * @throws IOException Si le fichier est introuvable (Ici, il doit se trouver à la racine
      */
-    public double load(String wifiFile, String gpsFile, Double seuil) throws IOException {
+    public void load(String wifiFile, String gpsFile, Double seuil) throws IOException {
         double nbTotal = 0;
         double nbReal = 0;
         String StrtoWifiFile = "./" + wifiFile;
@@ -72,7 +72,7 @@ public abstract class Traces implements Iterable<Trace> {
             Integer signal = 0;
             signal = signal.parseInt(SElementWifi.next());
 
-            if (!ssid.equals("<hidden>")) {
+            if (!ssid.equals("<hidden>")) { //Optimisation possible en reprenant le parcours du fichier au lieu de recommencer
                 Scanner SLineGPS = new Scanner (new FileReader(new File(StrtoGPSFile)));
                 SLineGPS.nextLine();
                 while (SLineGPS.hasNextLine()) {
@@ -106,7 +106,7 @@ public abstract class Traces implements Iterable<Trace> {
     }
 
     /**
-     * Sauvegarde une liste de trace dans un fichier (toString les affiches dans le bon format, il n'y a qu'à enregistrer
+     * Sauvegarde une liste de trace dans un fichier (toString les affiche dans le bon format, il n'y a qu'à enregistrer
      * @param nomFichier où enregistrer
      * @throws IOException si il est impossible d'écrire dans le fichier
      */
@@ -120,9 +120,11 @@ public abstract class Traces implements Iterable<Trace> {
 
     public abstract Collection<Trace> initialiser();
 
+
     @Override
     public Iterator<Trace> iterator() {
-        return ; //TO DO
+        return listeTrace.iterator();
     }
+
 
 }
