@@ -42,7 +42,7 @@ public class LinkedListTraces extends Traces{
         LinkedListTraces trace_capture = new LinkedListTraces();
         double time = System.currentTimeMillis();
         try {
-            trace_capture.load("capture_wifi.csv","capture_gps.csv",20.0);
+            trace_capture.load("capture_wifi_2.csv","capture_gps_2.csv",20.0);
             long freem = Runtime.getRuntime().freeMemory();
             System.out.println(trace_capture.toString());
 
