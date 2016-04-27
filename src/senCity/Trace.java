@@ -23,9 +23,5 @@ public class Trace {
         return result;
     }
 
-    public static void main(String[] args) {
-        GPS coord = new GPS(32.0,23.4);
-        Trace testTrace = new Trace("123456", "eduroam", 23, coord);
-        System.out.println(testTrace.toString());
-    }
+
 }
