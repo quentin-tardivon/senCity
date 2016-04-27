@@ -1,0 +1,42 @@
+Trace *-- Traces
+Traces <|-- ArrayListTrace
+Traces <|-- LinkedListTrace
+GPS *-- Trace
+
+class Trace {
+String ts
+String ssid
+int signal
+GPS coord
+Trace(String ts, String ssid, int signal)
+String toString()
+}
+
+class Traces{
+Collection<Trace> listeTrace
+void ajouterTrace(Trace trace)
+String toString()
+void save(String fileName)
+void load(String fileName)
+Collection<Trace> initialiser()
+Iterator<Trace> iterator()
+}
+
+class ArrayListTrace {
+initialiser() Collection<Trace>
+}
+
+class LinkedListTrace {
+initialiser() Collection<Trace>
+}
+
+class GPS {
+double longitude
+double latitude
+
+double getLatitude()
+double getLongitude()
+double setLongitude()
+double setLatitude()
+String toString()
+}
