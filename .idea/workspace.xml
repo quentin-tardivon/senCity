@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="980a10a1-10d4-40c7-9209-f177547736d1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/senCity/testGPS.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/arteozEx/testHashMap.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/senCity/HashMapTraces.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/senCity/MapTraces.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senCity/Test.class" afterPath="$PROJECT_DIR$/bin/senCity/Test.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senCity/Trace.class" afterPath="$PROJECT_DIR$/bin/senCity/Trace.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/senCity/Traces.class" afterPath="$PROJECT_DIR$/bin/senCity/Traces.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/senCity/ArrayListTraces.java" afterPath="$PROJECT_DIR$/src/senCity/ArrayListTraces.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/senCity/LinkedListTraces.java" afterPath="$PROJECT_DIR$/src/senCity/LinkedListTraces.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/senCity/Test.java" afterPath="$PROJECT_DIR$/src/senCity/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/senCity/Trace.java" afterPath="$PROJECT_DIR$/src/senCity/Trace.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/senCity/Traces.java" afterPath="$PROJECT_DIR$/src/senCity/Traces.java" />
     </list>
     <ignored path="senCity.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,8 +51,8 @@
       <file leaf-file-name="LinkedListTraces.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/senCity/LinkedListTraces.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="171">
+              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="25" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -56,11 +61,18 @@
       <file leaf-file-name="Traces.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/senCity/Traces.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="198">
+              <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="docComment;method#ajouter#0;class#Traces#0" expanded="false" />
+                <element signature="e#468#469#0" expanded="true" />
+                <element signature="e#510#511#0" expanded="true" />
+                <element signature="docComment;method#taille#0;class#Traces#0" expanded="false" />
+                <element signature="method#toString#0;class#Traces#0" expanded="false" />
+                <element signature="docComment;method#load#0;class#Traces#0" expanded="false" />
                 <element signature="method#load#0;class#Traces#0" expanded="false" />
+                <element signature="docComment;method#save#0;class#Traces#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -69,8 +81,8 @@
       <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/senCity/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="142" column="0" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+            <state relative-caret-position="900">
+              <caret line="170" column="0" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
               <folding>
                 <element signature="method#testTrace#0;class#Test#0" expanded="false" />
                 <element signature="method#testInitiale#0;class#Test#0" expanded="false" />
@@ -82,7 +94,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GPS.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MapTraces.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/senCity/MapTraces.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;method#ajouter#0;class#MapTraces#0" expanded="false" />
+                <element signature="docComment;method#taille#0;class#MapTraces#0" expanded="false" />
+                <element signature="e#778#779#0" expanded="true" />
+                <element signature="e#822#823#0" expanded="true" />
+                <element signature="docComment;method#load#0;class#MapTraces#0" expanded="false" />
+                <element signature="docComment;method#save#0;class#MapTraces#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HashMapTraces.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/senCity/HashMapTraces.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#185#186#0" expanded="true" />
+                <element signature="e#214#215#0" expanded="true" />
+                <element signature="e#413#414#0" expanded="true" />
+                <element signature="e#440#441#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GPS.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/senCity/GPS.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="468">
@@ -95,12 +141,12 @@
       <file leaf-file-name="ArrayListTraces.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/senCity/ArrayListTraces.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            <state relative-caret-position="405">
+              <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="36" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#250#251#0" expanded="true" />
-                <element signature="e#279#280#0" expanded="true" />
+                <element signature="e#362#363#0" expanded="true" />
+                <element signature="e#391#392#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -109,10 +155,9 @@
       <file leaf-file-name="Stats.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/senCity/Stats.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
               <folding>
-                <element signature="method#trouve#0;class#Stats#0" expanded="false" />
                 <element signature="docComment;method#main#0;class#Stats#0" expanded="false" />
               </folding>
             </state>
@@ -151,12 +196,15 @@
       <list>
         <option value="$PROJECT_DIR$/src/senCity/GPS.java" />
         <option value="$PROJECT_DIR$/src/senCity/Stats.java" />
-        <option value="$PROJECT_DIR$/src/senCity/Traces.java" />
         <option value="$PROJECT_DIR$/src/senCity/testGPS.java" />
-        <option value="$PROJECT_DIR$/src/senCity/LinkedListTraces.java" />
-        <option value="$PROJECT_DIR$/src/senCity/ArrayListTraces.java" />
         <option value="$PROJECT_DIR$/src/senCity/Trace.java" />
+        <option value="$PROJECT_DIR$/src/senCity/Traces.java" />
+        <option value="$PROJECT_DIR$/src/senCity/ArrayListTraces.java" />
+        <option value="$PROJECT_DIR$/src/senCity/LinkedListTraces.java" />
         <option value="$PROJECT_DIR$/src/senCity/Test.java" />
+        <option value="$PROJECT_DIR$/src/arteozEx/testHashMap.java" />
+        <option value="$PROJECT_DIR$/src/senCity/HashMapTraces.java" />
+        <option value="$PROJECT_DIR$/src/senCity/MapTraces.java" />
       </list>
     </option>
   </component>
@@ -258,8 +306,14 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.uml" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/arteozEx" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="senCity" />
     </key>
@@ -267,7 +321,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.testTracesArrayList">
+  <component name="RunManager" selected="Application.LaunchTest">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -745,66 +799,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="testTrace" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="senCity.Trace" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="senCity" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="testTracesLinkedList" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="senCity.LinkedListTraces" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="senCity" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="testGPS" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="senCity.testGPS" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="senCity" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="testTracesArrayList" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="senCity.ArrayListTraces" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="senCity" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="false" name="SSID" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="senCity.Stats" />
@@ -820,13 +814,25 @@
       <envs />
       <method />
     </configuration>
-    <list size="6">
+    <configuration default="false" name="LaunchTest" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="senCity.Test" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="senCity" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Application.Timestamp" />
-      <item index="1" class="java.lang.String" itemvalue="Application.testTrace" />
-      <item index="2" class="java.lang.String" itemvalue="Application.testTracesLinkedList" />
-      <item index="3" class="java.lang.String" itemvalue="Application.testGPS" />
-      <item index="4" class="java.lang.String" itemvalue="Application.testTracesArrayList" />
-      <item index="5" class="java.lang.String" itemvalue="Application.SSID" />
+      <item index="1" class="java.lang.String" itemvalue="Application.SSID" />
+      <item index="2" class="java.lang.String" itemvalue="Application.LaunchTest" />
     </list>
   </component>
   <component name="SbtLocalSettings">
@@ -879,7 +885,7 @@
       <workItem from="1461504157299" duration="676000" />
       <workItem from="1461571860240" duration="1454000" />
       <workItem from="1461661000031" duration="992000" />
-      <workItem from="1461736773286" duration="1326000" />
+      <workItem from="1461736773286" duration="7308000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout de Trace et Traces, à faire: load et save">
       <created>1458161025039</created>
@@ -937,11 +943,18 @@
       <option name="project" value="LOCAL" />
       <updated>1461661262436</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Organisation du projet">
+      <created>1461738135610</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1461738135610</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43694000" />
+    <option name="totallyTimeSpent" value="49676000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -958,30 +971,57 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32262996" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289855" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3180428" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20278184" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32721713" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973261" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32262996" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3180428" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32753623" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289855" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973261" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32262996" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3180428" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20278184" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32753623" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1003,10 +1043,32 @@
     <MESSAGE value="Correction du test de ArrayList" />
     <MESSAGE value="Partie 6 et UML à faire" />
     <MESSAGE value="Partie 3 faite" />
-    <option name="LAST_COMMIT_MESSAGE" value="Partie 3 faite" />
+    <MESSAGE value="Organisation du projet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Organisation du projet" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/senCity/Traces.java</url>
+          <line>112</line>
+          <properties class="senCity.Traces" method="save" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/senCity/Stats.java</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/senCity/Test.java</url>
+          <line>65</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1014,40 +1076,20 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/senCity/Stats.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-          <folding>
-            <element signature="method#trouve#0;class#Stats#0" expanded="false" />
-            <element signature="docComment;method#main#0;class#Stats#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/senCity/Trace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="4" column="71" selection-start-line="4" selection-start-column="71" selection-end-line="4" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/senCity/LinkedListTraces.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/senCity/Traces.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="50" column="84" selection-start-line="50" selection-start-column="84" selection-end-line="50" selection-end-column="84" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;method#ajouter#0;class#Traces#0" expanded="false" />
+            <element signature="e#468#469#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+            <element signature="docComment;method#taille#0;class#Traces#0" expanded="false" />
+            <element signature="method#toString#0;class#Traces#0" expanded="false" />
+            <element signature="docComment;method#load#0;class#Traces#0" expanded="false" />
             <element signature="method#load#0;class#Traces#0" expanded="false" />
+            <element signature="docComment;method#save#0;class#Traces#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1058,8 +1100,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#250#251#0" expanded="true" />
-            <element signature="e#279#280#0" expanded="true" />
+            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1069,7 +1111,6 @@
         <state relative-caret-position="0">
           <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding>
-            <element signature="method#trouve#0;class#Stats#0" expanded="false" />
             <element signature="docComment;method#main#0;class#Stats#0" expanded="false" />
           </folding>
         </state>
@@ -1097,7 +1138,14 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;method#ajouter#0;class#Traces#0" expanded="false" />
+            <element signature="e#468#469#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+            <element signature="docComment;method#taille#0;class#Traces#0" expanded="false" />
+            <element signature="method#toString#0;class#Traces#0" expanded="false" />
+            <element signature="docComment;method#load#0;class#Traces#0" expanded="false" />
             <element signature="method#load#0;class#Traces#0" expanded="false" />
+            <element signature="docComment;method#save#0;class#Traces#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1108,8 +1156,8 @@
           <caret line="42" column="29" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#250#251#0" expanded="true" />
-            <element signature="e#279#280#0" expanded="true" />
+            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1119,7 +1167,6 @@
         <state relative-caret-position="0">
           <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding>
-            <element signature="method#trouve#0;class#Stats#0" expanded="false" />
             <element signature="docComment;method#main#0;class#Stats#0" expanded="false" />
           </folding>
         </state>
@@ -1147,7 +1194,14 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;method#ajouter#0;class#Traces#0" expanded="false" />
+            <element signature="e#468#469#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+            <element signature="docComment;method#taille#0;class#Traces#0" expanded="false" />
+            <element signature="method#toString#0;class#Traces#0" expanded="false" />
+            <element signature="docComment;method#load#0;class#Traces#0" expanded="false" />
             <element signature="method#load#0;class#Traces#0" expanded="false" />
+            <element signature="docComment;method#save#0;class#Traces#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1158,8 +1212,8 @@
           <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#250#251#0" expanded="true" />
-            <element signature="e#279#280#0" expanded="true" />
+            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1169,7 +1223,6 @@
         <state relative-caret-position="0">
           <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding>
-            <element signature="method#trouve#0;class#Stats#0" expanded="false" />
             <element signature="docComment;method#main#0;class#Stats#0" expanded="false" />
           </folding>
         </state>
@@ -1196,7 +1249,6 @@
         <state relative-caret-position="0">
           <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding>
-            <element signature="method#trouve#0;class#Stats#0" expanded="false" />
             <element signature="docComment;method#main#0;class#Stats#0" expanded="false" />
           </folding>
         </state>
@@ -1223,7 +1275,6 @@
         <state relative-caret-position="0">
           <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding>
-            <element signature="method#trouve#0;class#Stats#0" expanded="false" />
             <element signature="docComment;method#main#0;class#Stats#0" expanded="false" />
           </folding>
         </state>
@@ -1250,7 +1301,6 @@
         <state relative-caret-position="0">
           <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding>
-            <element signature="method#trouve#0;class#Stats#0" expanded="false" />
             <element signature="docComment;method#main#0;class#Stats#0" expanded="false" />
           </folding>
         </state>
@@ -1277,7 +1327,6 @@
         <state relative-caret-position="0">
           <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding>
-            <element signature="method#trouve#0;class#Stats#0" expanded="false" />
             <element signature="docComment;method#main#0;class#Stats#0" expanded="false" />
           </folding>
         </state>
@@ -1304,7 +1353,6 @@
         <state relative-caret-position="0">
           <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="34" selection-end-column="43" />
           <folding>
-            <element signature="method#trouve#0;class#Stats#0" expanded="false" />
             <element signature="docComment;method#main#0;class#Stats#0" expanded="false" />
           </folding>
         </state>
@@ -1407,35 +1455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="uml://JAVA/senCity">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>senCity</OriginalElement>
-          <nodes>
-            <node x="" y="">senCity.Trace</node>
-            <node x="" y="">senCity.Test</node>
-            <node x="" y="">senCity.LinkedListTraces</node>
-            <node x="" y="">senCity.ArrayListTraces</node>
-            <node x="" y="">senCity.testGPS</node>
-            <node x="" y="">senCity.GPS</node>
-            <node x="" y="">senCity.Traces</node>
-            <node x="" y="">senCity.Stats</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.6341698841698842" x="450.0" y="408.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Inner Classes</Category>
-            <Category>Methods</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/capture_wifi_2.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1451,29 +1470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/senCity/ArrayListTraces.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#250#251#0" expanded="true" />
-            <element signature="e#279#280#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/senCity/Stats.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-          <folding>
-            <element signature="method#trouve#0;class#Stats#0" expanded="false" />
-            <element signature="docComment;method#main#0;class#Stats#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/senCity/Trace.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -1482,35 +1478,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/senCity/LinkedListTraces.java">
+    <entry file="file://$PROJECT_DIR$/src/senCity/Stats.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/senCity/Traces.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#load#0;class#Traces#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/senCity/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="142" column="0" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
-          <folding>
-            <element signature="method#testTrace#0;class#Test#0" expanded="false" />
-            <element signature="method#testInitiale#0;class#Test#0" expanded="false" />
-            <element signature="method#testArrayList#0;class#Test#0" expanded="false" />
-            <element signature="method#testLinkedList#0;class#Test#0" expanded="false" />
-            <element signature="method#testGPS#0;class#Test#0" expanded="false" />
+            <element signature="docComment;method#main#0;class#Stats#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1523,12 +1496,215 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/senCity/ArrayListTraces.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/arteozEx/testHashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/senCity/LinkedListTraces.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="25" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/senCity">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>senCity</OriginalElement>
+          <nodes>
+            <node x="184.0" y="163.0">senCity.Trace</node>
+            <node x="0.0" y="326.0">senCity.Test</node>
+            <node x="-163.0" y="-6.0">senCity.MapTraces</node>
+            <node x="157.0" y="84.0">senCity.LinkedListTraces</node>
+            <node x="0.0" y="84.0">senCity.ArrayListTraces</node>
+            <node x="-180.0" y="78.0">senCity.HashMapTraces</node>
+            <node x="106.0" y="326.0">senCity.GPS</node>
+            <node x="110.5" y="0.0">senCity.Traces</node>
+            <node x="298.0" y="163.0">senCity.Stats</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="senCity.HashMapTraces" target="senCity.MapTraces">
+              <point x="0.0" y="-17.0" />
+              <point x="0.0" y="17.0" />
+            </edge>
+            <edge source="senCity.ArrayListTraces" target="senCity.Traces">
+              <point x="0.0" y="-17.0" />
+              <point x="68.5" y="59.0" />
+              <point x="129.5" y="59.0" />
+              <point x="-19.0" y="17.0" />
+            </edge>
+            <edge source="senCity.LinkedListTraces" target="senCity.Traces">
+              <point x="0.0" y="-17.0" />
+              <point x="228.5" y="59.0" />
+              <point x="167.5" y="59.0" />
+              <point x="19.0" y="17.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-121.5" y="123.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/senCity/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="170" column="0" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
+          <folding>
+            <element signature="method#testTrace#0;class#Test#0" expanded="false" />
+            <element signature="method#testInitiale#0;class#Test#0" expanded="false" />
+            <element signature="method#testArrayList#0;class#Test#0" expanded="false" />
+            <element signature="method#testLinkedList#0;class#Test#0" expanded="false" />
+            <element signature="method#testGPS#0;class#Test#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/senCity/HashMapTraces.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#185#186#0" expanded="true" />
+            <element signature="e#214#215#0" expanded="true" />
+            <element signature="e#413#414#0" expanded="true" />
+            <element signature="e#440#441#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/senCity/Traces.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#ajouter#0;class#Traces#0" expanded="false" />
+            <element signature="e#468#469#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+            <element signature="docComment;method#taille#0;class#Traces#0" expanded="false" />
+            <element signature="method#toString#0;class#Traces#0" expanded="false" />
+            <element signature="docComment;method#load#0;class#Traces#0" expanded="false" />
+            <element signature="method#load#0;class#Traces#0" expanded="false" />
+            <element signature="docComment;method#save#0;class#Traces#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/senCity/MapTraces.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#ajouter#0;class#MapTraces#0" expanded="false" />
+            <element signature="docComment;method#taille#0;class#MapTraces#0" expanded="false" />
+            <element signature="e#778#779#0" expanded="true" />
+            <element signature="e#822#823#0" expanded="true" />
+            <element signature="docComment;method#load#0;class#MapTraces#0" expanded="false" />
+            <element signature="docComment;method#save#0;class#MapTraces#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>senCity</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>

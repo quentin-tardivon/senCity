@@ -24,4 +24,15 @@ public class LinkedListTraces extends Traces{
         listeTrace = new LinkedList<>();
         return listeTrace;
     }
+
+    @Override
+    public Traces extract(String ssid) {
+        Traces result = new LinkedListTraces();
+        for (Trace t: this.listeTrace) {
+            if (t.ssid.equals(ssid)) {
+                result.ajouter(t);
+            }
+        }
+        return result;
+    }
 }

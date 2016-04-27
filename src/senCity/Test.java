@@ -10,8 +10,8 @@ public class Test {
 	
 
 	public static void main(String[] args) {
-	
-
+		//testExtractArray();
+		testExtractLinkedList();
 	}
 
 	public void testTrace() {
@@ -96,7 +96,7 @@ public class Test {
 		}
 	}
 
-	public void testLinkedList() {
+	public static void testLinkedList() {
 		/*LinkedListTraces linkedListTraces = new LinkedListTraces();
         Trace trace1 = new Trace("123456", "eduroam", 23);
         Trace trace2 = new Trace("123456", "lolilo", 23);
@@ -129,7 +129,7 @@ public class Test {
 		}
 	}
 
-	public void testGPS() {
+	public static void testGPS() {
 		double longi = 12.3;
 		double lati = 34.3;
 		GPS coord = new GPS(longi,lati);
@@ -138,5 +138,33 @@ public class Test {
 		coord.setLatitude(23.0);
 		coord.setLongitude(12.45);
 		System.out.println(coord.toString());
+	}
+
+	public static void testExtractArray() {
+		ArrayListTraces trace_capture = new ArrayListTraces();
+		try {
+			trace_capture.load("capture_wifi.csv", "capture_gps.csv",20.0);
+		}
+		catch(IOException exception) {
+			System.out.println("Fichier introuvable");
+		}
+		double time = System.currentTimeMillis();
+		Traces extract_ssid = trace_capture.extract("BDE");
+		System.out.println(extract_ssid.toString());
+		System.out.println(System.currentTimeMillis() - time);
+	}
+
+	public static void testExtractLinkedList() {
+		LinkedListTraces trace_capture = new LinkedListTraces();
+		try {
+			trace_capture.load("capture_wifi.csv", "capture_gps.csv",20.0);
+		}
+		catch(IOException exception) {
+			System.out.println("Fichier introuvable");
+		}
+		double time = System.currentTimeMillis();
+		Traces extract_ssid = trace_capture.extract("BDE");
+		System.out.println(extract_ssid.toString());
+		System.out.println(System.currentTimeMillis() - time);
 	}
 }

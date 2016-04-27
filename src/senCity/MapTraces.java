@@ -4,23 +4,30 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Collection;
 import java.util.Iterator;
+import java.util.Map;
 import java.util.Scanner;
 
 /**
- * Created by quentin on 21/03/16.
+ * Created by quentin on 27/04/16.
  */
-public abstract class Traces implements Iterable<Trace> {
 
-    Collection<Trace> listeTrace;
+public abstract class MapTraces{
+    Map<String, Traces> mapTraces;
+
+    public abstract Map<String,Traces> initialiser();
 
     /**
      * Ajoute une trace à la liste
      * @param trace la trace à ajouter
      */
-    public void ajouter(Trace trace) {
-        this.listeTrace.add(trace);
+    public void ajouter(String ssid,Trace trace) { //TODO
+        if (mapTraces.containsKey(ssid)) {
+            this.mapTraces.get(ssid).ajouter();
+        }
+        else {
+            this.mapTraces.put(ssid,);
+        }
     }
 
     /**
@@ -28,13 +35,13 @@ public abstract class Traces implements Iterable<Trace> {
      * @return la taille de la liste de trace
      */
     public int taille() {
-        return this.listeTrace.size();
+        return this.mapTraces.size();
     }
 
 
     public String toString() {
         String result = "";
-        Iterator itera = this.listeTrace.iterator();
+        Iterator itera = this.mapTraces.iterator();
         for(int i = 0; i<this.taille(); i++) {
             while (itera.hasNext()) {
                 result = result + "\n" + itera.next().toString();
@@ -87,7 +94,7 @@ public abstract class Traces implements Iterable<Trace> {
                         Double finalLati = Double.parseDouble(lati);
                         Double finalLongi = Double.parseDouble(longi);
                         GPS coord = new GPS(finalLati, finalLongi);
-                        this.ajouter(new Trace(ts, ssid, signal,coord));
+                        this.ajouter(ssid,new Trace(ts, ssid, signal,coord));
                         nbReal+=1.0;
                         break;
                     }
@@ -118,15 +125,5 @@ public abstract class Traces implements Iterable<Trace> {
         writer.close();
     }
 
-    public abstract Collection<Trace> initialiser();
-
-
-    @Override
-    public Iterator<Trace> iterator() {
-        return listeTrace.iterator();
-    }
-
     public abstract Traces extract(String ssid);
-
-
 }
