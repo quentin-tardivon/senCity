@@ -1,4 +1,4 @@
-package senCity;
+package sencity;
 
 import java.io.File;
 import java.io.FileReader;

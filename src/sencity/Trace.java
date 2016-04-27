@@ -1,4 +1,4 @@
-package senCity;
+package sencity;
 
 /**
  * Created by Quentin TARDIVON

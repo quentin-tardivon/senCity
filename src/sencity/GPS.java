@@ -1,4 +1,4 @@
-package senCity;
+package sencity;
 
 /**
  * Created by quentin on 20/04/16.
