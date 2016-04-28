@@ -8,18 +8,18 @@ import java.util.Map;
  */
 public class HashMapTraces extends MapTraces {
 
-    public HashMapTraces() {
-        initialiser();
-    }
-
     @Override
-    public Map<String,Traces> initialiser() {
-        mapTraces = new HashMap<String,Traces>();
+    public Map initialiser() {
+        Map mapTraces = new HashMap();
         return mapTraces;
     }
 
     @Override
     public Traces extract(String ssid) {
-        return null;
+        Traces result = new LinkedListTraces();
+        for (String s : mapTraces.keySet()) {
+            result.ajouter(mapTraces.get(s));
+        }
+        return result;
     }
 }

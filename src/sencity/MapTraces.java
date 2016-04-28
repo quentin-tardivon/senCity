@@ -12,22 +12,23 @@ import java.util.Scanner;
  * Created by quentin on 27/04/16.
  */
 
-public abstract class MapTraces{
-    Map<String, Traces> mapTraces;
+public abstract class MapTraces {
+    Map<String, Trace> mapTraces;
 
-    public abstract Map<String,Traces> initialiser();
+    public abstract Map initialiser();
 
     /**
      * Ajoute une trace à la liste
      * @param trace la trace à ajouter
      */
     public void ajouter(String ssid,Trace trace) { //TODO
-        if (mapTraces.containsKey(ssid)) {
-            this.mapTraces.get(ssid).ajouter(trace);
-        }
-        else {
+            if (mapTraces.containsKey(ssid)) {
 
-        }
+            }
+        else {
+                this.mapTraces.put(ssid, trace);
+            }
+
     }
 
     /**
@@ -115,6 +116,7 @@ public abstract class MapTraces{
 
         writer.close();
     }
+
 
     public abstract Traces extract(String ssid);
 }

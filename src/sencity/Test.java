@@ -8,12 +8,13 @@ import java.util.Scanner;
 import java.util.StringJoiner;
 
 public class Test {
-	
+
 
 	public static void main(String[] args) {
 		//testExtractArray();
-		//testExtractLinkedList();
-		testLinkedList();
+		testExtractLinkedList();
+		//testLinkedList();
+        testHashMapTraces();
 	}
 
 	public void testTrace() {
@@ -167,6 +168,20 @@ public class Test {
 		double time = System.currentTimeMillis();
 		Traces extract_ssid = trace_capture.extract("BDE");
 		System.out.println(extract_ssid.toString());
+		System.out.println(System.currentTimeMillis() - time);
+	}
+
+	public static void testHashMapTraces() {
+		HashMapTraces trace_capture = new HashMapTraces();
+		try {
+			trace_capture.load("capture_wifi.csv", "capture_gps.csv",20.0);
+		}
+		catch(IOException exception) {
+			System.out.println("Fichier introuvable");
+		}
+		double time = System.currentTimeMillis();
+		//Traces extract_ssid = trace_capture.extract("BDE");
+		//System.out.println(extract_ssid.toString());
 		System.out.println(System.currentTimeMillis() - time);
 	}
 }
