@@ -34,12 +34,7 @@ public abstract class Traces implements Iterable<Trace> {
 
     public String toString() {
         String result = "";
-        Iterator itera = this.listeTrace.iterator();
-        for(int i = 0; i<this.taille(); i++) {
-            while (itera.hasNext()) {
-                result = result + "\n" + itera.next().toString();
-            }
-        }
+        for (Trace t: listeTrace) { result = result + "\n" + t.toString();}
         return result;
     }
 
@@ -52,11 +47,10 @@ public abstract class Traces implements Iterable<Trace> {
     public void load(String wifiFile, String gpsFile, Double seuil) throws IOException {
         double nbTotal = 0;
         double nbReal = 0;
-        String StrtoWifiFile = "./" + wifiFile;
-        String StrtoGPSFile = "./" + gpsFile;
+        String StrtoWifiFile = "./ressources/" + wifiFile;
+        String StrtoGPSFile = "./ressources/" + gpsFile;
         Scanner SLineWifi = new Scanner (new FileReader(new File(StrtoWifiFile)));
         SLineWifi.nextLine();
-
 
         while (SLineWifi.hasNextLine()) {
 
@@ -74,7 +68,6 @@ public abstract class Traces implements Iterable<Trace> {
 
             if (!ssid.equals("<hidden>")) { //Optimisation possible en reprenant le parcours du fichier au lieu de recommencer
                 Scanner SLineGPS = new Scanner (new FileReader(new File(StrtoGPSFile)));
-                SLineGPS.nextLine();
                 while (SLineGPS.hasNextLine()) {
 
                     Scanner SElementGPS = new Scanner(SLineGPS.nextLine());
@@ -82,15 +75,15 @@ public abstract class Traces implements Iterable<Trace> {
                     String tsGPS = SElementGPS.next();
                     tsGPS = tsGPS.substring(0,10); //Récupération des 10 premiers caractères de ts
                     if (tsGPS.equals(ts)) {
-                        String lati = SElementGPS.next();
-                        String longi = SElementGPS.next();
-                        Double finalLati = Double.parseDouble(lati);
-                        Double finalLongi = Double.parseDouble(longi);
-                        GPS coord = new GPS(finalLati, finalLongi);
+                        Double lati = Double.parseDouble(SElementGPS.next());
+                        Double longi = Double.parseDouble(SElementGPS.next());
+                        GPS coord = new GPS(lati, longi);
                         this.ajouter(new Trace(ts, ssid, signal,coord));
                         nbReal+=1.0;
+                        SElementGPS.close();
                         break;
                     }
+
                     SElementGPS.close();
                 }
                 SLineGPS.close();
@@ -111,7 +104,7 @@ public abstract class Traces implements Iterable<Trace> {
      * @throws IOException si il est impossible d'écrire dans le fichier
      */
     public void save(String nomFichier) throws IOException {
-        FileWriter writer = new FileWriter("./"+ nomFichier);
+        FileWriter writer = new FileWriter("./ressources/"+ nomFichier);
 
         writer.write(this.toString());
 

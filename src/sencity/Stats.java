@@ -19,7 +19,7 @@ public class Stats {
      * @return Soit une valeur erreur, soit la totalité des valeurs correspondantes
      */
 	public static String trouve(String name, String valeur, String fichier) {
-		String StrtoFile = "./" + fichier;
+		String StrtoFile = "./ressources/" + fichier;
 		String normalizeName = name.toLowerCase().replace(" ","");
 		String normalizeValeur = valeur.toLowerCase().replace(" ","");
 		String result = "";

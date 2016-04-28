@@ -5,13 +5,15 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.StringJoiner;
 
 public class Test {
 	
 
 	public static void main(String[] args) {
 		//testExtractArray();
-		testExtractLinkedList();
+		//testExtractLinkedList();
+		testLinkedList();
 	}
 
 	public void testTrace() {
@@ -21,7 +23,7 @@ public class Test {
 	}
 
 	public void testInitiale() {
-		String StrtoFile = ("./capture_wifi.csv");
+		String StrtoFile = ("./ressources/capture_wifi.csv");
 		try {
 			Scanner SLine = new Scanner (new FileReader(new File(StrtoFile)));
 
@@ -80,7 +82,7 @@ public class Test {
 			//System.out.println(trace_capture.toString());
 
 			try {
-				trace_capture.save("test_sauvegarde");
+				trace_capture.save("output_file");
 				System.out.println("Save!");
 				System.out.println(freem);
 				time = System.currentTimeMillis() - time;
@@ -111,7 +113,7 @@ public class Test {
 		try {
 			trace_capture.load("capture_wifi_2.csv","capture_gps_2.csv",20.0);
 			long freem = Runtime.getRuntime().freeMemory();
-			System.out.println(trace_capture.toString());
+			//System.out.println(trace_capture.toString());
 
 			try {
 				trace_capture.save("test_sauvegarde");

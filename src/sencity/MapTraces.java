@@ -23,10 +23,10 @@ public abstract class MapTraces{
      */
     public void ajouter(String ssid,Trace trace) { //TODO
         if (mapTraces.containsKey(ssid)) {
-            this.mapTraces.get(ssid).ajouter();
+            this.mapTraces.get(ssid).ajouter(trace);
         }
         else {
-            this.mapTraces.put(ssid,);
+
         }
     }
 
@@ -39,16 +39,7 @@ public abstract class MapTraces{
     }
 
 
-    public String toString() {
-        String result = "";
-        Iterator itera = this.mapTraces.iterator();
-        for(int i = 0; i<this.taille(); i++) {
-            while (itera.hasNext()) {
-                result = result + "\n" + itera.next().toString();
-            }
-        }
-        return result;
-    }
+
 
     /**
      * Charge un fichier et rempli une liste de trace avec les trace trouvées
@@ -59,8 +50,8 @@ public abstract class MapTraces{
     public void load(String wifiFile, String gpsFile, Double seuil) throws IOException {
         double nbTotal = 0;
         double nbReal = 0;
-        String StrtoWifiFile = "./" + wifiFile;
-        String StrtoGPSFile = "./" + gpsFile;
+        String StrtoWifiFile = "../../ressources/" + wifiFile;
+        String StrtoGPSFile = "../../ressources/" + gpsFile;
         Scanner SLineWifi = new Scanner (new FileReader(new File(StrtoWifiFile)));
         SLineWifi.nextLine();
 
@@ -118,7 +109,7 @@ public abstract class MapTraces{
      * @throws IOException si il est impossible d'écrire dans le fichier
      */
     public void save(String nomFichier) throws IOException {
-        FileWriter writer = new FileWriter("./"+ nomFichier);
+        FileWriter writer = new FileWriter("./ressources/"+ nomFichier);
 
         writer.write(this.toString());
 
