@@ -1,7 +1,12 @@
-Trace *-- Traces
+@startuml
+Trace --* Traces
 Traces <|-- ArrayListTrace
 Traces <|-- LinkedListTrace
-GPS *-- Trace
+AbstractTraces <|-- Traces
+AbstractTraces <|-- MapTraces
+MapTraces <|-- HashMapTraces
+GPS --* Trace
+Traces --* MapTraces
 
 class Trace {
 String ts
@@ -16,19 +21,39 @@ class Traces{
 Collection<Trace> listeTrace
 void ajouterTrace(Trace trace)
 String toString()
-void save(String fileName)
-void load(String fileName)
 Collection<Trace> initialiser()
 Iterator<Trace> iterator()
 }
 
 class ArrayListTrace {
 initialiser() Collection<Trace>
+extract(String) Traces
 }
 
 class LinkedListTrace {
 initialiser() Collection<Trace>
+extract(String) Traces
 }
+
+class MapTraces{
+Map<String,Traces> mapTraces
+initialiser() Map<String,Traces>
+taille() int
+extract(String) Traces
+}
+
+class HashMapTraces {
+initialiser() Map<String,Traces>
+extract(String) Traces
+String toString()
+}
+
+class AbstractTraces {
+abstract void ajouter(Trace trace)
+void load(String fileName
+void save(String fileName)
+}
+
 
 class GPS {
 double longitude
@@ -40,3 +65,4 @@ double setLongitude()
 double setLatitude()
 String toString()
 }
+@enduml

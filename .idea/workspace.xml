@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4968861-6e57-4c68-9a84-2e243d62b894" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/Decompte_heure.ods" afterPath="$PROJECT_DIR$/docs/Decompte_heure.ods" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/umlDiagramm" afterPath="$PROJECT_DIR$/docs/umlDiagramm" />
     </list>
     <ignored path="senCity.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,28 +26,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ArrayListTraces.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sencity/ArrayListTraces.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GPS.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sencity/GPS.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="HashMapTraces.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sencity/HashMapTraces.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -69,16 +49,18 @@
       <file leaf-file-name="MapTraces.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sencity/MapTraces.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+            <state relative-caret-position="324">
+              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#961#962#0" expanded="true" />
+                <element signature="e#1005#1006#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractTraces.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AbstractTraces.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sencity/AbstractTraces.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
@@ -86,6 +68,123 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JAVA/sencity" pinned="false" current-in-tab="false">
+        <entry file="uml://JAVA/sencity">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>sencity</OriginalElement>
+              <nodes>
+                <node x="0.0" y="440.0">sencity.LinkedListTraces</node>
+                <node x="-498.7500000000002" y="40.930000000000035">sencity.GPS</node>
+                <node x="-148.23000000000008" y="97.35999999999987">sencity.Trace</node>
+                <node x="361.0" y="0.0">sencity.AbstractTraces</node>
+                <node x="94.0" y="161.0">sencity.Traces</node>
+                <node x="546.0" y="187.0">sencity.MapTraces</node>
+                <node x="0.0" y="921.0">sencity.Stats</node>
+                <node x="568.0" y="427.0">sencity.HashMapTraces</node>
+                <node x="284.0" y="440.0">sencity.ArrayListTraces</node>
+                <node x="-442.89" y="593.26">sencity.Test</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="sencity.Trace" target="sencity.GPS">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="sencity.Traces" target="sencity.Trace">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="sencity.Test" target="sencity.GPS">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="sencity.Test" target="sencity.LinkedListTraces">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="sencity.AbstractTraces" target="sencity.Trace">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="sencity.Test" target="sencity.ArrayListTraces">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="sencity.MapTraces" target="sencity.AbstractTraces">
+                  <point x="0.0" y="-82.0" />
+                  <point x="718.0" y="136.0" />
+                  <point x="524.5" y="136.0" />
+                  <point x="54.5" y="55.5" />
+                </edge>
+                <edge source="sencity.HashMapTraces" target="sencity.MapTraces">
+                  <point x="0.0" y="-55.5" />
+                  <point x="0.0" y="82.0" />
+                </edge>
+                <edge source="sencity.AbstractTraces" target="sencity.GPS">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="sencity.Test" target="sencity.Trace">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="sencity.ArrayListTraces" target="sencity.Traces">
+                  <point x="0.0" y="-42.5" />
+                  <point x="416.0" y="402.0" />
+                  <point x="364.0" y="402.0" />
+                  <point x="90.0" y="108.0" />
+                </edge>
+                <edge source="sencity.Traces" target="sencity.AbstractTraces">
+                  <point x="0.0" y="-108.0" />
+                  <point x="274.0" y="136.0" />
+                  <point x="415.5" y="136.0" />
+                  <point x="-54.5" y="55.5" />
+                </edge>
+                <edge source="sencity.MapTraces" target="sencity.LinkedListTraces">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="sencity.LinkedListTraces" target="sencity.Traces">
+                  <point x="0.0" y="-42.5" />
+                  <point x="132.0" y="402.0" />
+                  <point x="184.0" y="402.0" />
+                  <point x="-90.0" y="108.0" />
+                </edge>
+                <edge source="sencity.Test" target="sencity.HashMapTraces">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+                <edge source="sencity.MapTraces" target="sencity.Traces">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.5847953216374269" x="-92.59999999999997" y="380.40000000000003" />
+              <SelectedNodes>
+                <node>sencity.ArrayListTraces</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Fields</Category>
+                <Category>Methods</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="umlDiagramm" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/umlDiagramm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1474">
+              <caret line="67" column="7" selection-start-line="67" selection-start-column="7" selection-end-line="67" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -161,6 +260,7 @@
         <option value="$PROJECT_DIR$/src/sencity/Traces.java" />
         <option value="$PROJECT_DIR$/src/sencity/MapTraces.java" />
         <option value="$PROJECT_DIR$/src/sencity/AbstractTraces.java" />
+        <option value="$PROJECT_DIR$/docs/umlDiagramm" />
       </list>
     </option>
   </component>
@@ -245,6 +345,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ressources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="senCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="senCity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -771,7 +885,7 @@
       <workItem from="1461850523165" duration="1053000" />
       <workItem from="1462220957005" duration="186000" />
       <workItem from="1462221349897" duration="92000" />
-      <workItem from="1462363782590" duration="5129000" />
+      <workItem from="1462363782590" duration="6174000" />
     </task>
     <task id="LOCAL-00001" summary="MàJ">
       <created>1461851466548</created>
@@ -787,15 +901,22 @@
       <option name="project" value="LOCAL" />
       <updated>1462368929326</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fin Partie 4">
+      <created>1462369042646</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1462369042646</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12875000" />
+    <option name="totallyTimeSpent" value="13920000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -809,7 +930,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17715959" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17715959" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -878,24 +999,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sencity/MapTraces.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2266">
-          <caret line="111" column="45" selection-start-line="111" selection-start-column="45" selection-end-line="111" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sencity/Stats.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sencity/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2420">
@@ -962,6 +1065,8 @@
           <caret line="111" column="45" selection-start-line="111" selection-start-column="45" selection-end-line="111" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#961#962#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1040,6 +1145,8 @@
           <caret line="111" column="45" selection-start-line="111" selection-start-column="45" selection-end-line="111" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#961#962#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1118,6 +1225,8 @@
           <caret line="111" column="45" selection-start-line="111" selection-start-column="45" selection-end-line="111" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#961#962#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1186,6 +1295,8 @@
           <caret line="111" column="45" selection-start-line="111" selection-start-column="45" selection-end-line="111" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#961#962#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1299,16 +1410,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sencity/MapTraces.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sencity/AbstractTraces.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -1316,6 +1417,131 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sencity/MapTraces.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#961#962#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/sencity">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>sencity</OriginalElement>
+          <nodes>
+            <node x="0.0" y="440.0">sencity.LinkedListTraces</node>
+            <node x="-498.7500000000002" y="40.930000000000035">sencity.GPS</node>
+            <node x="-148.23000000000008" y="97.35999999999987">sencity.Trace</node>
+            <node x="361.0" y="0.0">sencity.AbstractTraces</node>
+            <node x="94.0" y="161.0">sencity.Traces</node>
+            <node x="546.0" y="187.0">sencity.MapTraces</node>
+            <node x="0.0" y="921.0">sencity.Stats</node>
+            <node x="568.0" y="427.0">sencity.HashMapTraces</node>
+            <node x="284.0" y="440.0">sencity.ArrayListTraces</node>
+            <node x="-442.89" y="593.26">sencity.Test</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="sencity.Trace" target="sencity.GPS">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="sencity.Traces" target="sencity.Trace">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="sencity.Test" target="sencity.GPS">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="sencity.Test" target="sencity.LinkedListTraces">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="sencity.AbstractTraces" target="sencity.Trace">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="sencity.Test" target="sencity.ArrayListTraces">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="sencity.MapTraces" target="sencity.AbstractTraces">
+              <point x="0.0" y="-82.0" />
+              <point x="718.0" y="136.0" />
+              <point x="524.5" y="136.0" />
+              <point x="54.5" y="55.5" />
+            </edge>
+            <edge source="sencity.HashMapTraces" target="sencity.MapTraces">
+              <point x="0.0" y="-55.5" />
+              <point x="0.0" y="82.0" />
+            </edge>
+            <edge source="sencity.AbstractTraces" target="sencity.GPS">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="sencity.Test" target="sencity.Trace">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="sencity.ArrayListTraces" target="sencity.Traces">
+              <point x="0.0" y="-42.5" />
+              <point x="416.0" y="402.0" />
+              <point x="364.0" y="402.0" />
+              <point x="90.0" y="108.0" />
+            </edge>
+            <edge source="sencity.Traces" target="sencity.AbstractTraces">
+              <point x="0.0" y="-108.0" />
+              <point x="274.0" y="136.0" />
+              <point x="415.5" y="136.0" />
+              <point x="-54.5" y="55.5" />
+            </edge>
+            <edge source="sencity.MapTraces" target="sencity.LinkedListTraces">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="sencity.LinkedListTraces" target="sencity.Traces">
+              <point x="0.0" y="-42.5" />
+              <point x="132.0" y="402.0" />
+              <point x="184.0" y="402.0" />
+              <point x="-90.0" y="108.0" />
+            </edge>
+            <edge source="sencity.Test" target="sencity.HashMapTraces">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="sencity.MapTraces" target="sencity.Traces">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.5847953216374269" x="-92.59999999999997" y="380.40000000000003" />
+          <SelectedNodes>
+            <node>sencity.ArrayListTraces</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/umlDiagramm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1474">
+          <caret line="67" column="7" selection-start-line="67" selection-start-column="7" selection-end-line="67" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
