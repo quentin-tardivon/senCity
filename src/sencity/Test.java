@@ -11,9 +11,11 @@ public class Test {
 	
 
 	public static void main(String[] args) {
-		//testExtractArray();
-		//testExtractLinkedList();
-		testLinkedList();
+		testExtractArray();
+		testExtractLinkedList();
+		testExtractHashMapTraces();
+		//testLinkedList();
+		//testHashMapTraces();
 	}
 
 	public void testTrace() {
@@ -87,7 +89,7 @@ public class Test {
 				System.out.println(freem);
 				time = System.currentTimeMillis() - time;
 				System.out.println("Time=" + time);
-				for (Trace t: trace_capture) { System.out.println(t) ;}
+				//for (Trace t: trace_capture) { System.out.println(t) ;}
 			}
 			catch (IOException exception) {
 				System.out.println("Impossible de créer le fichier ou trop de donnée perdue");
@@ -143,30 +145,79 @@ public class Test {
 	}
 
 	public static void testExtractArray() {
+		System.out.println("Extract ArrayList");
 		ArrayListTraces trace_capture = new ArrayListTraces();
 		try {
+			double time = System.currentTimeMillis();
 			trace_capture.load("capture_wifi.csv", "capture_gps.csv",20.0);
+			System.out.println(System.currentTimeMillis() - time);
 		}
 		catch(IOException exception) {
 			System.out.println("Fichier introuvable");
 		}
 		double time = System.currentTimeMillis();
 		Traces extract_ssid = trace_capture.extract("BDE");
-		System.out.println(extract_ssid.toString());
+		//System.out.println(extract_ssid.toString());
 		System.out.println(System.currentTimeMillis() - time);
 	}
 
 	public static void testExtractLinkedList() {
+		System.out.println("Extract LinkedList");
 		LinkedListTraces trace_capture = new LinkedListTraces();
 		try {
+			double time = System.currentTimeMillis();
 			trace_capture.load("capture_wifi.csv", "capture_gps.csv",20.0);
+			System.out.println(System.currentTimeMillis() - time);
 		}
 		catch(IOException exception) {
 			System.out.println("Fichier introuvable");
 		}
 		double time = System.currentTimeMillis();
 		Traces extract_ssid = trace_capture.extract("BDE");
-		System.out.println(extract_ssid.toString());
+		//System.out.println(extract_ssid.toString());
 		System.out.println(System.currentTimeMillis() - time);
 	}
+
+	public static void testHashMapTraces() {
+		HashMapTraces trace_capture = new HashMapTraces();
+		double time = System.currentTimeMillis();
+		try {
+			trace_capture.load("capture_wifi_2.csv","capture_gps_2.csv",20.0);
+			long freem = Runtime.getRuntime().freeMemory();
+			//System.out.println(trace_capture.toString());
+
+			try {
+				trace_capture.save("test_sauvegarde");
+				System.out.println("Save!");
+				System.out.println(freem);
+				time = System.currentTimeMillis() - time;
+				System.out.println("Time=" + time);
+			}
+			catch (IOException exception) {
+				System.out.println("Impossible de créer le fichier");
+			}
+		}
+		catch(IOException exception) {
+			System.out.println("Fichier introuvable");
+		}
+	}
+
+	public static void testExtractHashMapTraces() {
+		System.out.println("Extract HashMap");
+		HashMapTraces trace_capture = new HashMapTraces();
+		try {
+			double time = System.currentTimeMillis();
+			trace_capture.load("capture_wifi.csv", "capture_gps.csv",20.0);
+			System.out.println(System.currentTimeMillis() - time);
+		}
+		catch(IOException exception) {
+			System.out.println("Fichier introuvable");
+		}
+		double time = System.currentTimeMillis();
+		Traces extract_ssid = trace_capture.extract("BDE");
+		System.out.println(System.currentTimeMillis() - time);
+		System.out.println(extract_ssid.toString());
+
+	}
+
 }

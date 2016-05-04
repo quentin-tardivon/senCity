@@ -20,6 +20,15 @@ public class HashMapTraces extends MapTraces {
 
     @Override
     public Traces extract(String ssid) {
-        return null;
+       return mapTraces.get(ssid);
+    }
+
+    @Override
+    public String toString() {
+        String result = new String();
+        for (String s : mapTraces.keySet()) {
+            result = result + mapTraces.get(s).toString();
+        }
+        return result;
     }
 }
