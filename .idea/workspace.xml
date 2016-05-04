@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a4968861-6e57-4c68-9a84-2e243d62b894" name="Default" comment="MàJ">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sencity/AbstractTraces.java" />
+    <list default="true" id="a4968861-6e57-4c68-9a84-2e243d62b894" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sencity/HashMapTraces.java" afterPath="$PROJECT_DIR$/src/sencity/HashMapTraces.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sencity/MapTraces.java" afterPath="$PROJECT_DIR$/src/sencity/MapTraces.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sencity/Test.java" afterPath="$PROJECT_DIR$/src/sencity/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sencity/Traces.java" afterPath="$PROJECT_DIR$/src/sencity/Traces.java" />
     </list>
     <ignored path="senCity.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,10 +51,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="638">
               <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-              <folding>
-                <element signature="e#413#414#0" expanded="true" />
-                <element signature="e#454#455#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -111,17 +103,9 @@
       <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sencity/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1003">
-              <caret line="217" column="62" selection-start-line="217" selection-start-column="62" selection-end-line="217" selection-end-column="62" />
-              <folding>
-                <element signature="method#testTrace#0;class#Test#0" expanded="false" />
-                <element signature="method#testInitiale#0;class#Test#0" expanded="false" />
-                <element signature="method#testArrayList#0;class#Test#0" expanded="false" />
-                <element signature="method#testLinkedList#0;class#Test#0" expanded="false" />
-                <element signature="method#testGPS#0;class#Test#0" expanded="false" />
-                <element signature="method#testExtractArray#0;class#Test#0" expanded="false" />
-                <element signature="method#testHashMapTraces#0;class#Test#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="3604">
+              <caret line="217" column="54" selection-start-line="217" selection-start-column="54" selection-end-line="217" selection-end-column="54" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -787,7 +771,7 @@
       <workItem from="1461850523165" duration="1053000" />
       <workItem from="1462220957005" duration="186000" />
       <workItem from="1462221349897" duration="92000" />
-      <workItem from="1462363782590" duration="5001000" />
+      <workItem from="1462363782590" duration="5129000" />
     </task>
     <task id="LOCAL-00001" summary="MàJ">
       <created>1461851466548</created>
@@ -796,15 +780,22 @@
       <option name="project" value="LOCAL" />
       <updated>1461851466548</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fin Partie 4">
+      <created>1462368929326</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1462368929326</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12747000" />
+    <option name="totallyTimeSpent" value="12875000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -873,7 +864,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="MàJ" />
-    <option name="LAST_COMMIT_MESSAGE" value="MàJ" />
+    <MESSAGE value="Fin Partie 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fin Partie 4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -908,15 +900,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2420">
           <caret line="115" column="14" selection-start-line="115" selection-start-column="14" selection-end-line="115" selection-end-column="14" />
-          <folding>
-            <element signature="method#testTrace#0;class#Test#0" expanded="false" />
-            <element signature="method#testInitiale#0;class#Test#0" expanded="false" />
-            <element signature="method#testArrayList#0;class#Test#0" expanded="false" />
-            <element signature="method#testLinkedList#0;class#Test#0" expanded="false" />
-            <element signature="method#testGPS#0;class#Test#0" expanded="false" />
-            <element signature="method#testExtractArray#0;class#Test#0" expanded="false" />
-            <element signature="method#testHashMapTraces#0;class#Test#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -960,10 +944,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <element signature="e#413#414#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -997,15 +978,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2420">
           <caret line="115" column="14" selection-start-line="115" selection-start-column="14" selection-end-line="115" selection-end-column="14" />
-          <folding>
-            <element signature="method#testTrace#0;class#Test#0" expanded="false" />
-            <element signature="method#testInitiale#0;class#Test#0" expanded="false" />
-            <element signature="method#testArrayList#0;class#Test#0" expanded="false" />
-            <element signature="method#testLinkedList#0;class#Test#0" expanded="false" />
-            <element signature="method#testGPS#0;class#Test#0" expanded="false" />
-            <element signature="method#testExtractArray#0;class#Test#0" expanded="false" />
-            <element signature="method#testHashMapTraces#0;class#Test#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1049,10 +1022,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <element signature="e#413#414#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1086,15 +1056,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1980">
           <caret line="115" column="14" selection-start-line="115" selection-start-column="14" selection-end-line="115" selection-end-column="14" />
-          <folding>
-            <element signature="method#testTrace#0;class#Test#0" expanded="false" />
-            <element signature="method#testInitiale#0;class#Test#0" expanded="false" />
-            <element signature="method#testArrayList#0;class#Test#0" expanded="false" />
-            <element signature="method#testLinkedList#0;class#Test#0" expanded="false" />
-            <element signature="method#testGPS#0;class#Test#0" expanded="false" />
-            <element signature="method#testExtractArray#0;class#Test#0" expanded="false" />
-            <element signature="method#testHashMapTraces#0;class#Test#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1138,10 +1100,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <element signature="e#413#414#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1175,15 +1134,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1980">
           <caret line="115" column="14" selection-start-line="115" selection-start-column="14" selection-end-line="115" selection-end-column="14" />
-          <folding>
-            <element signature="method#testTrace#0;class#Test#0" expanded="false" />
-            <element signature="method#testInitiale#0;class#Test#0" expanded="false" />
-            <element signature="method#testArrayList#0;class#Test#0" expanded="false" />
-            <element signature="method#testLinkedList#0;class#Test#0" expanded="false" />
-            <element signature="method#testGPS#0;class#Test#0" expanded="false" />
-            <element signature="method#testExtractArray#0;class#Test#0" expanded="false" />
-            <element signature="method#testHashMapTraces#0;class#Test#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1217,10 +1168,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <element signature="e#413#414#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1254,15 +1202,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1980">
           <caret line="115" column="14" selection-start-line="115" selection-start-column="14" selection-end-line="115" selection-end-column="14" />
-          <folding>
-            <element signature="method#testTrace#0;class#Test#0" expanded="false" />
-            <element signature="method#testInitiale#0;class#Test#0" expanded="false" />
-            <element signature="method#testArrayList#0;class#Test#0" expanded="false" />
-            <element signature="method#testLinkedList#0;class#Test#0" expanded="false" />
-            <element signature="method#testGPS#0;class#Test#0" expanded="false" />
-            <element signature="method#testExtractArray#0;class#Test#0" expanded="false" />
-            <element signature="method#testHashMapTraces#0;class#Test#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1329,26 +1269,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="638">
           <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-          <folding>
-            <element signature="e#413#414#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sencity/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="217" column="62" selection-start-line="217" selection-start-column="62" selection-end-line="217" selection-end-column="62" />
-          <folding>
-            <element signature="method#testTrace#0;class#Test#0" expanded="false" />
-            <element signature="method#testInitiale#0;class#Test#0" expanded="false" />
-            <element signature="method#testArrayList#0;class#Test#0" expanded="false" />
-            <element signature="method#testLinkedList#0;class#Test#0" expanded="false" />
-            <element signature="method#testGPS#0;class#Test#0" expanded="false" />
-            <element signature="method#testExtractArray#0;class#Test#0" expanded="false" />
-            <element signature="method#testHashMapTraces#0;class#Test#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="3604">
+          <caret line="217" column="54" selection-start-line="217" selection-start-column="54" selection-end-line="217" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
