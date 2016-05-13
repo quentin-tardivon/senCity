@@ -12,4 +12,9 @@ public class Node {
     Node(char letter) {
         this.letter = letter;
     }
+
+    @Override
+    public String toString() {
+        return "letter " + letter + "\n" + "brother " + brother + "\n" + "son " + son + "\n" + "liste " + listetraces + "\n";
+    }
 }

@@ -233,9 +233,9 @@ public class Test {
 			System.out.println("Fichier introuvable");
 		}
 		double time = System.currentTimeMillis();
-		Traces extract_ssid = trace_capture.extract("BDE");
+		//Traces extract_ssid = trace_capture.extract("BDE");
 		System.out.println(System.currentTimeMillis() - time);
-		System.out.println(extract_ssid.toString());
+		//System.out.println(extract_ssid.toString());
 
 	}
 
