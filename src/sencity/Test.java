@@ -11,9 +11,10 @@ public class Test {
 	
 
 	public static void main(String[] args) {
-		testExtractArray();
-		testExtractLinkedList();
-		testExtractHashMapTraces();
+		testExtractTreeTraces();
+		//testExtractArray();
+		//testExtractLinkedList();
+		//testExtractHashMapTraces();
 		//testLinkedList();
 		//testHashMapTraces();
 	}
@@ -205,6 +206,24 @@ public class Test {
 	public static void testExtractHashMapTraces() {
 		System.out.println("Extract HashMap");
 		HashMapTraces trace_capture = new HashMapTraces();
+		try {
+			double time = System.currentTimeMillis();
+			trace_capture.load("capture_wifi.csv", "capture_gps.csv",20.0);
+			System.out.println(System.currentTimeMillis() - time);
+		}
+		catch(IOException exception) {
+			System.out.println("Fichier introuvable");
+		}
+		double time = System.currentTimeMillis();
+		Traces extract_ssid = trace_capture.extract("BDE");
+		System.out.println(System.currentTimeMillis() - time);
+		System.out.println(extract_ssid.toString());
+
+	}
+
+	public static void testExtractTreeTraces() {
+		System.out.println("Extract TreeTraces");
+		TreeTraces trace_capture = new TreeTraces();
 		try {
 			double time = System.currentTimeMillis();
 			trace_capture.load("capture_wifi.csv", "capture_gps.csv",20.0);

@@ -13,6 +13,7 @@ public abstract class AbstractTraces {
 
     public abstract void ajouter(Trace trace);
 
+    public abstract Traces extract(String ssid);
     /**
      * Charge un fichier et rempli une liste de trace avec les trace trouvées
      *
