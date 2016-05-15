@@ -30,4 +30,6 @@ public class LinkedListTraces extends Traces{
         }
         return result;
     }
+
+
 }

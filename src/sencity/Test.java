@@ -11,7 +11,9 @@ public class Test {
 	
 
 	public static void main(String[] args) {
-		testExtractTreeTraces();
+		testStrPartialExtractTreeTraces();
+		//testPartialExtractTreeTraces();
+		//testExtractTreeTraces();
 		//testExtractArray();
 		//testExtractLinkedList();
 		//testExtractHashMapTraces();
@@ -241,6 +243,52 @@ public class Test {
 		Traces extract_ssid = trace_capture.extract("BDE");
 		System.out.println(System.currentTimeMillis() - time);
 		//System.out.println(extract_ssid.toString());
+
+	}
+
+	public static void testPartialExtractTreeTraces() {
+		System.out.println("Extract PartialTreeTraces");
+		TreeTraces trace_capture = new TreeTraces();
+		try {
+			double time = System.currentTimeMillis();
+			trace_capture.load("capture_wifi.csv", "capture_gps.csv",20.0);
+			System.out.println(System.currentTimeMillis() - time);
+			Node focusNode = trace_capture.root;
+			while (focusNode != null) {
+				//System.out.println(focusNode.getLetter());
+				focusNode = focusNode.brother;
+			}
+		}
+		catch(IOException exception) {
+			System.out.println("Fichier introuvable");
+		}
+		double time = System.currentTimeMillis();
+		Traces extract_ssid = trace_capture.extractAll("BD");
+		System.out.println(System.currentTimeMillis() - time);
+		System.out.println(extract_ssid.toString());
+
+	}
+
+	public static void testStrPartialExtractTreeTraces() {
+		System.out.println("Extract PartialTreeTraces");
+		TreeTraces trace_capture = new TreeTraces();
+		try {
+			double time = System.currentTimeMillis();
+			trace_capture.load("capture_wifi.csv", "capture_gps.csv",20.0);
+			System.out.println(System.currentTimeMillis() - time);
+			Node focusNode = trace_capture.root;
+			while (focusNode != null) {
+				//System.out.println(focusNode.getLetter());
+				focusNode = focusNode.brother;
+			}
+		}
+		catch(IOException exception) {
+			System.out.println("Fichier introuvable");
+		}
+		double time = System.currentTimeMillis();
+		String extract_ssid = trace_capture.predictiveSaisie("BD");
+		System.out.println(System.currentTimeMillis() - time);
+		System.out.println(extract_ssid);
 
 	}
 

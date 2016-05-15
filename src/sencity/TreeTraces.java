@@ -79,4 +79,71 @@ public class TreeTraces extends AbstractTraces {
         return focusNode.getListetraces();
     }
 
+    public Traces extractAll(String prefixe) {
+        Node focusNode = root;
+        int prof = prefixe.length();
+        int i = 0;
+        while (i<prof-1) {
+            if (focusNode.getLetter() == prefixe.charAt(i)) {
+                i +=1;
+                focusNode = focusNode.getSon();
+            }
+            else {
+                focusNode = focusNode.getBrother();
+            }
+        }
+        return recursExtract(focusNode);
+    }
+
+    public Traces recursExtract(Node noeud) {
+        if (noeud.getListetraces() != null) {
+            return noeud.getListetraces();
+        }
+        else {
+            if (noeud.getSon() != null) {
+                if (noeud.getBrother() != null) {
+                    return recursExtract(noeud.getBrother());
+                }
+                return recursExtract(noeud.getSon());
+            }
+        }
+        return null;
+    }
+
+    public String predictiveSaisie(String prefixe) {
+        Node focusNode = root;
+        int prof = prefixe.length();
+        int i = 0;
+        while (i<prof-1) {
+            if (focusNode.getLetter() == prefixe.charAt(i)) {
+                i +=1;
+                focusNode = focusNode.getSon();
+            }
+            else {
+                focusNode = focusNode.getBrother();
+            }
+        }
+        return recursExtractStr(focusNode);
+    }
+
+    public String recursExtractStr(Node noeud) {
+        String ssid = "";
+        if (noeud.getListetraces() != null) {
+            for (Trace t: noeud.getListetraces().listeTrace) {
+                ssid = t.ssid;
+            }
+            return ssid;
+        }
+        else {
+            if (noeud.getSon() != null) {
+                if (noeud.getBrother() != null) {
+                    return recursExtractStr(noeud.getBrother());
+                }
+                return recursExtractStr(noeud.getSon());
+            }
+        }
+        return "";
+    }
+
+
 }
