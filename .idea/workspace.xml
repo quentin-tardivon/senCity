@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4968861-6e57-4c68-9a84-2e243d62b894" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sencity/QuizzCar.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sencity/Test.java" afterPath="$PROJECT_DIR$/src/sencity/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sencity/TreeTraces.java" afterPath="$PROJECT_DIR$/src/sencity/TreeTraces.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/umlDiagramm" afterPath="$PROJECT_DIR$/docs/umlDiagramm" />
     </list>
     <ignored path="senCity.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -93,7 +93,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TreeTraces.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TreeTraces.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sencity/TreeTraces.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="690">
@@ -103,11 +103,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="QuizzCar.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sencity/QuizzCar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="705">
+              <caret line="47" column="59" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sencity/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+            <state relative-caret-position="734">
+              <caret line="240" column="8" selection-start-line="240" selection-start-column="8" selection-end-line="240" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -156,8 +168,9 @@
         <option value="$PROJECT_DIR$/abreNaire/src/Node.java" />
         <option value="$PROJECT_DIR$/abreNaire/src/TestArbre.java" />
         <option value="$PROJECT_DIR$/abreNaire/src/DicoTree.java" />
-        <option value="$PROJECT_DIR$/src/sencity/Test.java" />
         <option value="$PROJECT_DIR$/src/sencity/TreeTraces.java" />
+        <option value="$PROJECT_DIR$/src/sencity/Test.java" />
+        <option value="$PROJECT_DIR$/src/sencity/QuizzCar.java" />
       </list>
     </option>
   </component>
@@ -259,7 +272,7 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Application.Final">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -737,6 +750,21 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="false" name="Final" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="sencity.QuizzCar" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="senCity" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="false" name="TestTrees" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="TestArbre" />
@@ -752,9 +780,10 @@
       <envs />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Application.Test" />
-      <item index="1" class="java.lang.String" itemvalue="Application.TestTrees" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Final" />
+      <item index="2" class="java.lang.String" itemvalue="Application.TestTrees" />
     </list>
   </component>
   <component name="SbtLocalSettings">
@@ -789,7 +818,7 @@
       <workItem from="1463142647575" duration="3133000" />
       <workItem from="1463225563225" duration="427000" />
       <workItem from="1463308684169" duration="3089000" />
-      <workItem from="1463336090298" duration="13772000" />
+      <workItem from="1463336090298" duration="16024000" />
     </task>
     <task id="LOCAL-00001" summary="MàJ">
       <created>1461851466548</created>
@@ -840,15 +869,22 @@
       <option name="project" value="LOCAL" />
       <updated>1463346618775</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Là, ça marche vraiment, avant il y avait un petit problème">
+      <created>1463349953054</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1463349953054</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46486000" />
+    <option name="totallyTimeSpent" value="48738000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="30" width="1922" height="1051" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -858,7 +894,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3253138" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3253138" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -921,7 +957,8 @@
     <MESSAGE value="Début partie 5, ça ne marche pas encore" />
     <MESSAGE value="Début partie 5, code avant un essai recursif" />
     <MESSAGE value="L'arbre fonctionne, c'est juste degueu, faudrait voir si on peut faire de la facto de code mais ça fonctionne" />
-    <option name="LAST_COMMIT_MESSAGE" value="L'arbre fonctionne, c'est juste degueu, faudrait voir si on peut faire de la facto de code mais ça fonctionne" />
+    <MESSAGE value="Là, ça marche vraiment, avant il y avait un petit problème" />
+    <option name="LAST_COMMIT_MESSAGE" value="Là, ça marche vraiment, avant il y avait un petit problème" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -934,14 +971,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sencity/HashMapTraces.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sencity/LinkedListTraces.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -1213,111 +1242,6 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.IntelliJIdea2016.1/idea64.vmoptions" />
-    <entry file="uml://JAVA/sencity">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>sencity</OriginalElement>
-          <nodes>
-            <node x="0.0" y="440.0">sencity.LinkedListTraces</node>
-            <node x="-498.7500000000002" y="40.930000000000035">sencity.GPS</node>
-            <node x="-148.23000000000008" y="97.35999999999987">sencity.Trace</node>
-            <node x="361.0" y="0.0">sencity.AbstractTraces</node>
-            <node x="94.0" y="161.0">sencity.Traces</node>
-            <node x="546.0" y="187.0">sencity.MapTraces</node>
-            <node x="0.0" y="921.0">sencity.Stats</node>
-            <node x="568.0" y="427.0">sencity.HashMapTraces</node>
-            <node x="284.0" y="440.0">sencity.ArrayListTraces</node>
-            <node x="-442.89" y="593.26">sencity.Test</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="sencity.Trace" target="sencity.GPS">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="sencity.Traces" target="sencity.Trace">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="sencity.Test" target="sencity.GPS">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="sencity.Test" target="sencity.LinkedListTraces">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="sencity.AbstractTraces" target="sencity.Trace">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="sencity.Test" target="sencity.ArrayListTraces">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="sencity.MapTraces" target="sencity.AbstractTraces">
-              <point x="0.0" y="-82.0" />
-              <point x="718.0" y="136.0" />
-              <point x="524.5" y="136.0" />
-              <point x="54.5" y="55.5" />
-            </edge>
-            <edge source="sencity.HashMapTraces" target="sencity.MapTraces">
-              <point x="0.0" y="-55.5" />
-              <point x="0.0" y="82.0" />
-            </edge>
-            <edge source="sencity.AbstractTraces" target="sencity.GPS">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="sencity.Test" target="sencity.Trace">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="sencity.ArrayListTraces" target="sencity.Traces">
-              <point x="0.0" y="-42.5" />
-              <point x="416.0" y="402.0" />
-              <point x="364.0" y="402.0" />
-              <point x="90.0" y="108.0" />
-            </edge>
-            <edge source="sencity.Traces" target="sencity.AbstractTraces">
-              <point x="0.0" y="-108.0" />
-              <point x="274.0" y="136.0" />
-              <point x="415.5" y="136.0" />
-              <point x="-54.5" y="55.5" />
-            </edge>
-            <edge source="sencity.MapTraces" target="sencity.LinkedListTraces">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="sencity.LinkedListTraces" target="sencity.Traces">
-              <point x="0.0" y="-42.5" />
-              <point x="132.0" y="402.0" />
-              <point x="184.0" y="402.0" />
-              <point x="-90.0" y="108.0" />
-            </edge>
-            <edge source="sencity.Test" target="sencity.HashMapTraces">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="sencity.MapTraces" target="sencity.Traces">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.5847953216374269" x="-93.0" y="380.0" />
-          <SelectedNodes>
-            <node>sencity.ArrayListTraces</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Methods</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/umlDiagramm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="509">
@@ -1439,11 +1363,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sencity/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-          <folding />
+    <entry file="uml://JAVA/sencity">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>sencity</OriginalElement>
+          <nodes>
+            <node x="" y="">sencity.LinkedListTraces</node>
+            <node x="" y="">sencity.GPS</node>
+            <node x="" y="">sencity.Trace</node>
+            <node x="" y="">sencity.AbstractTraces</node>
+            <node x="" y="">sencity.Traces</node>
+            <node x="" y="">sencity.TreeTraces</node>
+            <node x="" y="">sencity.MapTraces</node>
+            <node x="" y="">sencity.Stats</node>
+            <node x="" y="">sencity.HashMapTraces</node>
+            <node x="" y="">sencity.Node</node>
+            <node x="" y="">sencity.ArrayListTraces</node>
+            <node x="" y="">sencity.Test</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.9" x="926.4444444444445" y="1054.111111111111" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Methods</Category>
+            <Category>Constructors</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
@@ -1451,6 +1400,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
           <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sencity/QuizzCar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="59" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sencity/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="734">
+          <caret line="240" column="8" selection-start-line="240" selection-start-column="8" selection-end-line="240" selection-end-column="59" />
           <folding />
         </state>
       </provider>

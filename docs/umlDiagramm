@@ -7,6 +7,9 @@ AbstractTraces <|-- MapTraces
 MapTraces <|-- HashMapTraces
 GPS --* Trace
 Traces --* MapTraces
+AbstractTraces <|-- TreeTraces
+TreeTraces *-- Node
+
 
 class Trace {
 String ts
@@ -52,6 +55,20 @@ class AbstractTraces {
 abstract void ajouter(Trace trace)
 void load(String fileName
 void save(String fileName)
+}
+
+class Node {
+char letter
+brother Node
+son Node
+listeTrace Traces
+Node(char)
+}
+
+class TreeTraces {
+root Node
+void ajouter(Trace)
+Traces extract(String)
 }
 
 
