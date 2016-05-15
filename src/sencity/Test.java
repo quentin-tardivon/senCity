@@ -150,7 +150,7 @@ public class Test {
 		ArrayListTraces trace_capture = new ArrayListTraces();
 		try {
 			double time = System.currentTimeMillis();
-			trace_capture.load("capture_wifi.csv", "capture_gps.csv",20.0);
+			trace_capture.load("capture_wifi_2.csv", "capture_gps_2.csv",20.0);
 			System.out.println(System.currentTimeMillis() - time);
 		}
 		catch(IOException exception) {
@@ -167,7 +167,7 @@ public class Test {
 		LinkedListTraces trace_capture = new LinkedListTraces();
 		try {
 			double time = System.currentTimeMillis();
-			trace_capture.load("capture_wifi.csv", "capture_gps.csv",20.0);
+			trace_capture.load("capture_wifi_2.csv", "capture_gps_2.csv",20.0);
 			System.out.println(System.currentTimeMillis() - time);
 		}
 		catch(IOException exception) {
@@ -183,7 +183,7 @@ public class Test {
 		HashMapTraces trace_capture = new HashMapTraces();
 		double time = System.currentTimeMillis();
 		try {
-			trace_capture.load("capture_wifi_2.csv","capture_gps_2.csv",20.0);
+			trace_capture.load("capture_wifi.csv","capture_gps.csv",20.0);
 			long freem = Runtime.getRuntime().freeMemory();
 			//System.out.println(trace_capture.toString());
 
@@ -208,7 +208,7 @@ public class Test {
 		HashMapTraces trace_capture = new HashMapTraces();
 		try {
 			double time = System.currentTimeMillis();
-			trace_capture.load("capture_wifi.csv", "capture_gps.csv",20.0);
+			trace_capture.load("capture_wifi_2.csv", "capture_gps_2.csv",20.0);
 			System.out.println(System.currentTimeMillis() - time);
 		}
 		catch(IOException exception) {
@@ -217,7 +217,7 @@ public class Test {
 		double time = System.currentTimeMillis();
 		Traces extract_ssid = trace_capture.extract("BDE");
 		System.out.println(System.currentTimeMillis() - time);
-		System.out.println(extract_ssid.toString());
+		//System.out.println(extract_ssid.toString());
 
 	}
 
@@ -226,11 +226,11 @@ public class Test {
 		TreeTraces trace_capture = new TreeTraces();
 		try {
 			double time = System.currentTimeMillis();
-			trace_capture.load("capture_wifi.csv", "capture_gps.csv",20.0);
+			trace_capture.load("capture_wifi_2.csv", "capture_gps_2.csv",20.0);
 			System.out.println(System.currentTimeMillis() - time);
 			Node focusNode = trace_capture.root;
 			while (focusNode != null) {
-				System.out.println(focusNode.getLetter());
+				//System.out.println(focusNode.getLetter());
 				focusNode = focusNode.brother;
 			}
 		}
@@ -240,7 +240,7 @@ public class Test {
 		double time = System.currentTimeMillis();
 		Traces extract_ssid = trace_capture.extract("BDE");
 		System.out.println(System.currentTimeMillis() - time);
-		System.out.println(extract_ssid.toString());
+		//System.out.println(extract_ssid.toString());
 
 	}
 

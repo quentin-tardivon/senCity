@@ -14,7 +14,7 @@ public class TreeTraces extends AbstractTraces {
 
 
     @Override
-    public void ajouter(Trace trace) { //TODO Regarder attentivement les NODE.SON
+    public void ajouter(Trace trace) {
         Node focusNode = root;
         int i = 1;
         if (root == null) {
@@ -36,9 +36,11 @@ public class TreeTraces extends AbstractTraces {
                 if (focusNode.getSon().getLetter() == trace.ssid.charAt(i)) {
                     focusNode = focusNode.getSon();
                     i += 1;
-                } else {
-                    while (focusNode.getSon().getBrother() != null && focusNode.getSon().getBrother().getLetter() != trace.ssid.charAt(i)) {
-                        focusNode = focusNode.getSon().getBrother();
+                }
+                else {
+                    focusNode = focusNode.getSon();
+                    while (focusNode.getBrother() != null && focusNode.getBrother().getLetter() != trace.ssid.charAt(i)) {
+                        focusNode = focusNode.getBrother();
                     }
                     if (focusNode.getBrother() == null) {
                         focusNode.setBrother(new Node(trace.ssid.charAt(i)));
@@ -46,7 +48,8 @@ public class TreeTraces extends AbstractTraces {
                     focusNode = focusNode.getBrother();
                     i += 1;
                 }
-            } else {
+            }
+            else {
                 focusNode.setSon(new Node(trace.ssid.charAt(i)));
                 focusNode = focusNode.getSon();
                 i += 1;
@@ -60,12 +63,11 @@ public class TreeTraces extends AbstractTraces {
 
 
     @Override
-    public Traces extract(String ssid) throws IllegalArgumentException {
+    public Traces extract(String ssid) throws IllegalArgumentException { //TODO Rajouter cette exception si on ne trouve pas le ssid
         Node focusNode = root;
         int prof = ssid.length();
         int i = 0;
         while (i<prof-1) {
-            System.out.println(i);
             if (focusNode.getLetter() == ssid.charAt(i)) {
                 i +=1;
                 focusNode = focusNode.getSon();
