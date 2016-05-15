@@ -228,14 +228,19 @@ public class Test {
 			double time = System.currentTimeMillis();
 			trace_capture.load("capture_wifi.csv", "capture_gps.csv",20.0);
 			System.out.println(System.currentTimeMillis() - time);
+			Node focusNode = trace_capture.root;
+			while (focusNode != null) {
+				System.out.println(focusNode.getLetter());
+				focusNode = focusNode.brother;
+			}
 		}
 		catch(IOException exception) {
 			System.out.println("Fichier introuvable");
 		}
 		double time = System.currentTimeMillis();
-		//Traces extract_ssid = trace_capture.extract("BDE");
+		Traces extract_ssid = trace_capture.extract("BDE");
 		System.out.println(System.currentTimeMillis() - time);
-		//System.out.println(extract_ssid.toString());
+		System.out.println(extract_ssid.toString());
 
 	}
 
