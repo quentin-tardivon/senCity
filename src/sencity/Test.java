@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.StringJoiner;
 
@@ -11,8 +12,7 @@ public class Test {
 	
 
 	public static void main(String[] args) {
-		testStrPartialExtractTreeTraces();
-		//testPartialExtractTreeTraces();
+		testPartialExtractTreeTraces();
 		//testExtractTreeTraces();
 		//testExtractArray();
 		//testExtractLinkedList();
@@ -230,11 +230,6 @@ public class Test {
 			double time = System.currentTimeMillis();
 			trace_capture.load("capture_wifi_2.csv", "capture_gps_2.csv",20.0);
 			System.out.println(System.currentTimeMillis() - time);
-			Node focusNode = trace_capture.root;
-			while (focusNode != null) {
-				//System.out.println(focusNode.getLetter());
-				focusNode = focusNode.brother;
-			}
 		}
 		catch(IOException exception) {
 			System.out.println("Fichier introuvable");
@@ -242,7 +237,7 @@ public class Test {
 		double time = System.currentTimeMillis();
 		Traces extract_ssid = trace_capture.extract("BDE");
 		System.out.println(System.currentTimeMillis() - time);
-		//System.out.println(extract_ssid.toString());
+		System.out.println(extract_ssid.toString());
 
 	}
 
@@ -253,43 +248,15 @@ public class Test {
 			double time = System.currentTimeMillis();
 			trace_capture.load("capture_wifi.csv", "capture_gps.csv",20.0);
 			System.out.println(System.currentTimeMillis() - time);
-			Node focusNode = trace_capture.root;
-			while (focusNode != null) {
-				//System.out.println(focusNode.getLetter());
-				focusNode = focusNode.brother;
-			}
 		}
 		catch(IOException exception) {
 			System.out.println("Fichier introuvable");
 		}
 		double time = System.currentTimeMillis();
-		Traces extract_ssid = trace_capture.extractAll("BD");
+		LinkedList<Traces> extract_ssid = trace_capture.extractAll("free");
 		System.out.println(System.currentTimeMillis() - time);
 		System.out.println(extract_ssid.toString());
-
 	}
 
-	public static void testStrPartialExtractTreeTraces() {
-		System.out.println("Extract PartialTreeTraces");
-		TreeTraces trace_capture = new TreeTraces();
-		try {
-			double time = System.currentTimeMillis();
-			trace_capture.load("capture_wifi.csv", "capture_gps.csv",20.0);
-			System.out.println(System.currentTimeMillis() - time);
-			Node focusNode = trace_capture.root;
-			while (focusNode != null) {
-				//System.out.println(focusNode.getLetter());
-				focusNode = focusNode.brother;
-			}
-		}
-		catch(IOException exception) {
-			System.out.println("Fichier introuvable");
-		}
-		double time = System.currentTimeMillis();
-		String extract_ssid = trace_capture.predictiveSaisie("BD");
-		System.out.println(System.currentTimeMillis() - time);
-		System.out.println(extract_ssid);
-
-	}
 
 }
