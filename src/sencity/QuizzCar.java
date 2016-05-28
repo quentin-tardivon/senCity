@@ -27,6 +27,7 @@ public class QuizzCar {
 
         System.out.println("Extract TreeTraces");
         TreeTraces trace_capture = new TreeTraces();
+
         try {
 
             trace_capture.load(wifi, gps,tol);
