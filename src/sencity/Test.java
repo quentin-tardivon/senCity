@@ -12,7 +12,8 @@ public class Test {
 	
 
 	public static void main(String[] args) {
-		testPartialExtractTreeTraces();
+		testGraphData();
+		//testPartialExtractTreeTraces();
 		//testExtractTreeTraces();
 		//testExtractArray();
 		//testExtractLinkedList();
@@ -228,7 +229,7 @@ public class Test {
 		TreeTraces trace_capture = new TreeTraces();
 		try {
 			double time = System.currentTimeMillis();
-			trace_capture.load("capture_wifi_2.csv", "capture_gps_2.csv",20.0);
+			trace_capture.load("capture_wifi.csv", "capture_gps.csv",20.0);
 			System.out.println(System.currentTimeMillis() - time);
 		}
 		catch(IOException exception) {
@@ -238,7 +239,57 @@ public class Test {
 		Traces extract_ssid = trace_capture.extract("BDE");
 		System.out.println(System.currentTimeMillis() - time);
 		System.out.println(extract_ssid.toString());
-
+		Double moydistance = 0.0;
+		Double moysignal = 0.0;
+		int compt = 0;
+		int compt2 = 0;
+		Double maxDistance = -200.0;
+		Double minDistance = 3000000000000.0;
+		int maxSignal = -200;
+		int minSignal = 30000000;
+		int iIndice = 0;
+		int jIndice = 0;
+		for (Trace i : extract_ssid) {
+			moysignal += i.signal;
+			compt2 += 1;
+			if (maxSignal < i.signal) {
+				maxSignal = i.signal;
+			}
+			else if (minSignal > i.signal) {
+				minSignal = i.signal;
+			}
+			for (Trace j : extract_ssid) {
+				if (jIndice > iIndice) {
+					Double distanceact = distanceStatic(i.coord,j.coord) ;
+					if (distanceact > maxDistance) {
+						maxDistance = distanceact;
+					}
+					else if (distanceact < minDistance) {
+						minDistance = distanceact;
+					}
+					System.out.println(distanceact);
+					moydistance += distanceact;
+					compt +=1;
+				}
+				jIndice +=1;
+			}
+			jIndice = 0;
+			iIndice +=1;
+		}
+		System.out.println("Moyenne Distance:");
+		System.out.println(moydistance/compt);
+		System.out.println("Moyenne Signal:");
+		System.out.println(moysignal/compt2);
+		System.out.println("Maximum Distance:");
+		System.out.println(maxDistance);
+		System.out.println("Minimum Distance:");
+		System.out.println(minDistance);
+		System.out.println("Maximum Signal:");
+		System.out.println(maxSignal);
+		System.out.println("Minimum Signal:");
+		System.out.println(minSignal);
+		System.out.println(compt);
+		System.out.println(compt2);
 	}
 
 	public static void testPartialExtractTreeTraces() {
@@ -256,6 +307,33 @@ public class Test {
 		LinkedList<Traces> extract_ssid = trace_capture.extractAll("free");
 		System.out.println(System.currentTimeMillis() - time);
 		System.out.println(extract_ssid.toString());
+
+	}
+
+
+	static public Double distanceStatic(GPS point1, GPS point2) {
+		return 6378137 * Math.acos(Math.sin(Math.toRadians(point1.getLatitude())) * Math.sin(Math.toRadians(point2.getLatitude())) + (Math.cos(Math.toRadians(point1.getLatitude())) * Math.cos(Math.toRadians(point2.getLatitude())) * Math.cos(Math.toRadians(point2.getLongitude()) - Math.toRadians(point1.getLongitude()))));
+	}
+
+
+	public static void testGraphData() {
+		System.out.println("Extract GraphData");
+		TreeTraces trace_capture = new TreeTraces();
+		try {
+			double time = System.currentTimeMillis();
+			trace_capture.load("capture_wifi.csv", "capture_gps.csv",20.0);
+			System.out.println(System.currentTimeMillis() - time);
+		}
+		catch(IOException exception) {
+			System.out.println("Fichier introuvable");
+		}
+		double time = System.currentTimeMillis();
+		Traces extract_ssid = trace_capture.extract("BDE");
+		System.out.println(System.currentTimeMillis() - time);
+		System.out.println(extract_ssid.toString());
+		DataGraph GraphDeTest = new DataGraph(extract_ssid,10,90.0);
+		System.out.println(GraphDeTest.toString());
+		System.out.println(GraphDeTest.getPourcentage());
 	}
 
 
