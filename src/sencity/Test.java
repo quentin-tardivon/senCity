@@ -331,7 +331,7 @@ public class Test {
 		Traces extract_ssid = trace_capture.extract("eduroam");
 		System.out.println(System.currentTimeMillis() - time);
 		System.out.println(extract_ssid.toString());
-		DataGraph GraphDeTest = new DataGraph(extract_ssid,10,90.0);
+		DataGraphMat GraphDeTest = new DataGraphMat(extract_ssid,10,90.0);
 		System.out.println(GraphDeTest.toString());
 		System.out.println(GraphDeTest.getPourcentage());
 		System.out.println(GraphDeTest.surfaceReseau());

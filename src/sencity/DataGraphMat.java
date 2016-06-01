@@ -1,26 +1,20 @@
 package sencity;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.LinkedList;
+import java.util.*;
 
 
 /**
  * Created by quentin on 5/18/16.
  */
-public class DataGraph {
+public class DataGraphMat {
 
-    private Collection<Trace> listeSommet = new LinkedList();
-    private Collection<Arc> listeArc = new LinkedList();
+    private Collection<Trace> listeSommet = new ArrayList();
+    private boolean[][] matriceArc = new boolean[20000][20000];
 
     private Double pourcentage;
 
-    public DataGraph(Traces traces, int seuilSignal, Double seuilDistance) {
+    public DataGraphMat(Traces traces, int seuilSignal, Double seuilDistance) {
         initialiser(traces, seuilSignal, seuilDistance);
-    }
-
-    public Iterator<Arc> iterator() {
-        return listeArc.iterator();
     }
 
     public void initialiser(Traces traces, int seuilSignal, Double seuilDistance) {
@@ -36,7 +30,7 @@ public class DataGraph {
                     if (jIndice > iIndice) {
                         Double distanceSom = distance(i.coord,j.coord);
                         if (distanceSom < seuilDistance) {
-                            this.ajouterArc(new Arc(i,j,distanceSom));
+                            this.ajouterArc(iIndice,jIndice);
                         }
                     }
                     jIndice +=1;
@@ -53,20 +47,23 @@ public class DataGraph {
         return listeSommet;
     }
 
-    public Collection<Arc> getListeArc() {
-        return listeArc;
-    }
+
 
     public void setListeSommet(LinkedList listeSommet) {
         this.listeSommet = listeSommet;
     }
 
-    public void setListeArc(LinkedList listeArc) {
-        this.listeArc = listeArc;
+
+    public void ajouterArc(int i, int j) {
+        matriceArc[i][j] = true;
     }
 
-    public void ajouterArc(Arc arc) {
-        listeArc.add(arc);
+    public void retirerArc(int i, int j) {
+        matriceArc[i][j] = false;
+    }
+
+    public void existeArc(int i, int j) {
+
     }
 
     public void ajouterSommet(Trace sommet) {
@@ -81,11 +78,16 @@ public class DataGraph {
         return pourcentage;
     }
 
+    public boolean[][] getMatriceArc() {
+        return matriceArc;
+    }
+
     @Override
     public String toString() {
-        return "DataGraph{" +
+        return "DataGraphMat{" +
                 "listeSommet=" + listeSommet +
-                ", listeArc=" + listeArc +
+                ", matriceArc=" + Arrays.toString(matriceArc) +
+                ", pourcentage=" + pourcentage +
                 '}';
     }
 
@@ -95,18 +97,18 @@ public class DataGraph {
         Trace sommetBG = new Trace("0","init",-10,new GPS(100.0,100.0));
         Trace sommetBD = new Trace("0","init",-10,new GPS(100.0,0.0));
         Double p,diag,b1,c1,b2,c2,surface;
-        for (Arc i : listeArc) {
-            if (i.getSommet1().coord.getLatitude()>sommetHG.coord.getLatitude() && i.getSommet1().coord.getLongitude()<sommetHG.coord.getLongitude()) {
-                sommetHG=i.getSommet1();
+        for (Trace i : listeSommet) {
+            if (i.coord.getLatitude()>sommetHG.coord.getLatitude() && i.coord.getLongitude()<sommetHG.coord.getLongitude()) {
+                sommetHG=i;
             }
-            if (i.getSommet1().coord.getLatitude()>sommetHD.coord.getLatitude() && i.getSommet1().coord.getLongitude()>sommetHD.coord.getLongitude()) {
-                sommetHD=i.getSommet1();
+            if (i.coord.getLatitude()>sommetHD.coord.getLatitude() && i.coord.getLongitude()>sommetHD.coord.getLongitude()) {
+                sommetHD=i;
             }
-            if (i.getSommet1().coord.getLatitude()<sommetBG.coord.getLatitude() && i.getSommet1().coord.getLongitude()<sommetBG.coord.getLongitude()) {
-                sommetBG=i.getSommet1();
+            if (i.coord.getLatitude()<sommetBG.coord.getLatitude() && i.coord.getLongitude()<sommetBG.coord.getLongitude()) {
+                sommetBG=i;
             }
-            if (i.getSommet1().coord.getLatitude()<sommetBD.coord.getLatitude() && i.getSommet1().coord.getLongitude()>sommetBD.coord.getLongitude()) {
-                sommetBD=i.getSommet1();
+            if (i.coord.getLatitude()<sommetBD.coord.getLatitude() && i.coord.getLongitude()>sommetBD.coord.getLongitude()) {
+                sommetBD=i;
             }
         }
         System.out.println(sommetHG);
