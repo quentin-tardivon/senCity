@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a4968861-6e57-4c68-9a84-2e243d62b894" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sencity/DataGraph.java" afterPath="$PROJECT_DIR$/src/sencity/DataGraph.java" />
     </list>
     <ignored path="senCity.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -179,9 +178,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
-    <option name="y" value="-25" />
+    <option name="y" value="30" />
     <option name="width" value="1368" />
-    <option name="height" value="794" />
+    <option name="height" value="739" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -872,7 +871,7 @@
       <workItem from="1464609227639" duration="11515000" />
       <workItem from="1464621336028" duration="2238000" />
       <workItem from="1464706451091" duration="483000" />
-      <workItem from="1464784932021" duration="8000" />
+      <workItem from="1464784932021" duration="97000" />
     </task>
     <task id="LOCAL-00001" summary="MàJ">
       <created>1461851466548</created>
@@ -965,14 +964,21 @@
       <option name="project" value="LOCAL" />
       <updated>1464620710275</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Grosse avance du TP6">
+      <created>1464784966579</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1464784966579</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83151000" />
+    <option name="totallyTimeSpent" value="83240000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-25" width="1368" height="794" extended-state="6" />
+    <frame x="-1" y="30" width="1368" height="739" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
