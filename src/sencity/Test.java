@@ -1,5 +1,9 @@
 package sencity;
 
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -335,6 +339,11 @@ public class Test {
 		System.out.println(GraphDeTest.toString());
 		System.out.println(GraphDeTest.getPourcentage());
 		System.out.println(GraphDeTest.surfaceReseau());
+		Stage stage = new Stage();
+		new ScatterChartSample().graphTraces(stage,GraphDeTest.getListeSommet());
+
 	}
+
+
 
 }
