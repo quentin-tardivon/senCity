@@ -81,4 +81,9 @@ public class DataGraph {
                 ", listeArc=" + listeArc +
                 '}';
     }
+
+    public Double surfaceReseau() {
+
+    }
+
 }
