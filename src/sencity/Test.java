@@ -1,9 +1,5 @@
 package sencity;
 
-import javafx.application.Application;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -335,15 +331,10 @@ public class Test {
 		Traces extract_ssid = trace_capture.extract("eduroam");
 		System.out.println(System.currentTimeMillis() - time);
 		System.out.println(extract_ssid.toString());
-		DataGraphMat GraphDeTest = new DataGraphMat(extract_ssid,10,90.0);
+		DataGraph GraphDeTest = new DataGraph(extract_ssid,10,90.0);
 		System.out.println(GraphDeTest.toString());
 		System.out.println(GraphDeTest.getPourcentage());
 		System.out.println(GraphDeTest.surfaceReseau());
-		Stage stage = new Stage();
-		new ScatterChartSample().graphTraces(stage,GraphDeTest.getListeSommet());
-
 	}
-
-
 
 }
