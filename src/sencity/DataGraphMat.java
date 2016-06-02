@@ -161,7 +161,11 @@ public class DataGraphMat {
         marquage.ajouter(depart);
 
         while (marquage.taille() != 0) {
+            System.out.println(dist[listeSommet.indexOf(destination)]);
+            System.out.println(marquage.taille());
             Trace x = enleverMin(dist,marquage);
+            System.out.println("X = " + x.toString());
+            System.out.println("destination = " + destination.toString());
             if (x.equals(destination)) {
                 //return dist[listeSommet.indexOf(destination)];
                 return chemin[listeSommet.indexOf(destination)];
@@ -179,12 +183,14 @@ public class DataGraphMat {
         if (dist[listeSommet.indexOf(y)] > dist[listeSommet.indexOf(x)] + distance(x.coord,y.coord)) {
             dist[listeSommet.indexOf(y)] = dist[listeSommet.indexOf(x)] + distance(x.coord,y.coord);
             chemin[listeSommet.indexOf(y)].ajouter(x);
+            System.out.println("Ajout");
+            System.out.println(y.toString());
             marquage.ajouter(y);
         }
     }
 
     public Trace enleverMin(Double[] dist, Traces marquage) {
-        Double min = 0.0;
+        Double min = 1000000.0;
         int indiceMin = -1;
         for (int i=0; i<dist.length; i++) {
             if (dist[i] < min) {
@@ -192,6 +198,7 @@ public class DataGraphMat {
                 indiceMin = i;
             }
         }
-        return marquage.retirer(listeSommet.get(indiceMin));
+        marquage.retirer(listeSommet.get(indiceMin));
+        return listeSommet.get(indiceMin);
     }
 }

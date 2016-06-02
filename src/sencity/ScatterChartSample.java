@@ -51,11 +51,26 @@ public class ScatterChartSample extends Application {
         }*/
 
 
-        DataGraphMat GraphDeTest = new DataGraphMat(extract_ssid2,10,90.0);
+        DataGraphMat GraphDeTest = new DataGraphMat(extract_ssid2,10,190.0);
         XYChart.Series valTraces = new XYChart.Series();
+        int indiceI = 0;
+        Trace trace1 = null;
+        Trace trace2 = null;
         for (Trace i: GraphDeTest.getListeSommet()) {
+            indiceI += 1;
             valTraces.getData().add(new XYChart.Data(i.coord.getLongitude()*1,i.coord.getLatitude()*1));
+            if (indiceI == 1) {
+                trace1 = i;
+            }
+            else if(indiceI == 2) {
+                trace2 = i;
+            }
         }
+        /*XYChart.Series valTraces2 = new XYChart.Series();
+        for (Trace i: GraphDeTest.dijkstra(trace1,trace2)) {
+            valTraces.getData().add(new XYChart.Data(i.coord.getLongitude()*1,i.coord.getLatitude()*1));
+        }*/
+        GraphDeTest.dijkstra(trace1,trace2).toString();
         sc.getData().addAll(valTraces);
 
         Scene scene = new Scene(sc,500,400);
