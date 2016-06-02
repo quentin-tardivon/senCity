@@ -23,6 +23,11 @@ public abstract class Traces extends AbstractTraces implements Iterable<Trace> {
         this.listeTrace.add(trace);
     }
 
+    public Trace retirer(Trace trace) {
+        this.listeTrace.remove(trace);
+        return trace;
+    }
+
     /**
      *
      * @return la taille de la liste de trace

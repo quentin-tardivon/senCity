@@ -1,5 +1,6 @@
 package sencity;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 
@@ -8,8 +9,8 @@ import java.util.*;
  */
 public class DataGraphMat {
 
-    private Collection<Trace> listeSommet = new ArrayList();
-    private boolean[][] matriceArc = new boolean[20000][20000];
+    private ArrayList<Trace> listeSommet = new ArrayList();
+    private Double[][] matriceArc = new Double[4000][4000];
 
     private Double pourcentage;
 
@@ -47,23 +48,30 @@ public class DataGraphMat {
         return listeSommet;
     }
 
+    public boolean existeSommet(Trace sommet) {
+        for (Trace i : getListeSommet()) {
+            if (i.equals(sommet)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
-
-    public void setListeSommet(LinkedList listeSommet) {
+    public void setListeSommet(ArrayList listeSommet) {
         this.listeSommet = listeSommet;
     }
 
 
     public void ajouterArc(int i, int j) {
-        matriceArc[i][j] = true;
+        matriceArc[i][j] = distance(listeSommet.get(i).coord, listeSommet.get(j).coord);
     }
 
     public void retirerArc(int i, int j) {
-        matriceArc[i][j] = false;
+        matriceArc[i][j] = 0.0;
     }
 
-    public void existeArc(int i, int j) {
-
+    public Double valeurArc(int i, int j) {
+        return matriceArc[i][j];
     }
 
     public void ajouterSommet(Trace sommet) {
@@ -78,7 +86,7 @@ public class DataGraphMat {
         return pourcentage;
     }
 
-    public boolean[][] getMatriceArc() {
+    public Double[][] getMatriceArc() {
         return matriceArc;
     }
 
@@ -133,8 +141,57 @@ public class DataGraphMat {
         p=(diag+b2+c2)/2;
         surface+=Math.sqrt(p*(p-diag)*(p-b2)*(p-c2));
         return surface;
-
-
     }
 
+    public Traces dijkstra(Trace depart, Trace destination) {
+        if (!this.existeSommet(depart)) {
+            System.out.println("Le départ n'existe pas!");
+            return null;
+        }
+        final Traces marquage = new ArrayListTraces();
+        final Double[] dist = new Double[listeSommet.size()];
+        final Traces[] chemin = new Traces[listeSommet.size()];
+        for (int i=0; i <listeSommet.size(); i++) {
+            dist[i] = 100000.0;
+            chemin[i] = new ArrayListTraces();
+        }
+        dist[listeSommet.indexOf(depart)] = 0.0;
+        chemin[listeSommet.indexOf(depart)].ajouter(depart);
+
+        marquage.ajouter(depart);
+
+        while (marquage.taille() != 0) {
+            Trace x = enleverMin(dist,marquage);
+            if (x.equals(destination)) {
+                //return dist[listeSommet.indexOf(destination)];
+                return chemin[listeSommet.indexOf(destination)];
+            }
+            for (int i=0;i<listeSommet.size(); i++) {
+                if (valeurArc(listeSommet.indexOf(x), i) > 0) {
+                   this.miseAJour(listeSommet.get(i),x,marquage,dist,chemin);
+                }
+            }
+        }
+        return null;
+    }
+
+    public void miseAJour(Trace y, Trace x, Traces marquage, Double[] dist, Traces[] chemin) {
+        if (dist[listeSommet.indexOf(y)] > dist[listeSommet.indexOf(x)] + this.valeurArc(listeSommet.indexOf(x),listeSommet.indexOf(y))) {
+            dist[listeSommet.indexOf(y)] = dist[listeSommet.indexOf(x)] + this.valeurArc(listeSommet.indexOf(x),listeSommet.indexOf(y));
+            chemin[listeSommet.indexOf(y)].ajouter(x);
+            marquage.ajouter(y);
+        }
+    }
+
+    public Trace enleverMin(Double[] dist, Traces marquage) {
+        Double min = 0.0;
+        int indiceMin = -1;
+        for (int i=0; i<dist.length; i++) {
+            if (dist[i] < min) {
+                min = dist[i];
+                indiceMin = i;
+            }
+        }
+        return marquage.retirer(listeSommet.get(indiceMin));
+    }
 }
