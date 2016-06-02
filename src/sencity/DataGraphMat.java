@@ -10,7 +10,7 @@ import java.util.*;
 public class DataGraphMat {
 
     private ArrayList<Trace> listeSommet = new ArrayList();
-    private Double[][] matriceArc = new Double[4000][4000];
+    private boolean[][] matriceArc = new boolean[20000][20000];
 
     private Double pourcentage;
 
@@ -63,14 +63,14 @@ public class DataGraphMat {
 
 
     public void ajouterArc(int i, int j) {
-        matriceArc[i][j] = distance(listeSommet.get(i).coord, listeSommet.get(j).coord);
+        matriceArc[i][j] = true;
     }
 
     public void retirerArc(int i, int j) {
-        matriceArc[i][j] = 0.0;
+        matriceArc[i][j] = false;
     }
 
-    public Double valeurArc(int i, int j) {
+    public boolean existArc(int i, int j) {
         return matriceArc[i][j];
     }
 
@@ -86,7 +86,7 @@ public class DataGraphMat {
         return pourcentage;
     }
 
-    public Double[][] getMatriceArc() {
+    public boolean[][] getMatriceArc() {
         return matriceArc;
     }
 
@@ -167,7 +167,7 @@ public class DataGraphMat {
                 return chemin[listeSommet.indexOf(destination)];
             }
             for (int i=0;i<listeSommet.size(); i++) {
-                if (valeurArc(listeSommet.indexOf(x), i) > 0) {
+                if (existArc(listeSommet.indexOf(x), i)) {
                    this.miseAJour(listeSommet.get(i),x,marquage,dist,chemin);
                 }
             }
@@ -176,8 +176,8 @@ public class DataGraphMat {
     }
 
     public void miseAJour(Trace y, Trace x, Traces marquage, Double[] dist, Traces[] chemin) {
-        if (dist[listeSommet.indexOf(y)] > dist[listeSommet.indexOf(x)] + this.valeurArc(listeSommet.indexOf(x),listeSommet.indexOf(y))) {
-            dist[listeSommet.indexOf(y)] = dist[listeSommet.indexOf(x)] + this.valeurArc(listeSommet.indexOf(x),listeSommet.indexOf(y));
+        if (dist[listeSommet.indexOf(y)] > dist[listeSommet.indexOf(x)] + distance(x.coord,y.coord)) {
+            dist[listeSommet.indexOf(y)] = dist[listeSommet.indexOf(x)] + distance(x.coord,y.coord);
             chemin[listeSommet.indexOf(y)].ajouter(x);
             marquage.ajouter(y);
         }

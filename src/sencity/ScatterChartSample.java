@@ -40,7 +40,7 @@ public class ScatterChartSample extends Application {
         yAxis.setLabel("Latitude");
         sc.setTitle("Couverture Réseau");
 
-        Collection<Traces> extract_all = trace_capture.extractAll("");
+        /*Collection<Traces> extract_all = trace_capture.extractAll("");
         for (Traces i : extract_all) {
             DataGraphMat GraphDeTest = new DataGraphMat(i,10,90.0);
             XYChart.Series valTraces = new XYChart.Series();
@@ -48,7 +48,15 @@ public class ScatterChartSample extends Application {
                 valTraces.getData().add(new XYChart.Data(j.coord.getLongitude()*1,j.coord.getLatitude()*1));
             }
             sc.getData().addAll(valTraces);
+        }*/
+
+
+        DataGraphMat GraphDeTest = new DataGraphMat(extract_ssid2,10,90.0);
+        XYChart.Series valTraces = new XYChart.Series();
+        for (Trace i: GraphDeTest.getListeSommet()) {
+            valTraces.getData().add(new XYChart.Data(i.coord.getLongitude()*1,i.coord.getLatitude()*1));
         }
+        sc.getData().addAll(valTraces);
 
         Scene scene = new Scene(sc,500,400);
         stage.setScene(scene);
@@ -59,24 +67,4 @@ public class ScatterChartSample extends Application {
         launch(args);
     }
 
-    public void graphTraces(Stage stage,Collection<Trace> traces) {
-        stage.setTitle("Couverture réseau");
-        final NumberAxis xAxis = new NumberAxis(6.154, 6.158, 0.01);
-        final NumberAxis yAxis = new NumberAxis(48.669, 48.670, 0.01);
-        final ScatterChart<Number,Number> sc = new ScatterChart<Number,Number>(xAxis,yAxis);
-        xAxis.setLabel("Longitude");
-        yAxis.setLabel("Latitude");
-        sc.setTitle("Couverture Réseau");
-
-        XYChart.Series valTraces = new XYChart.Series();
-
-        for (Trace i: traces) {
-            valTraces.getData().add(new XYChart.Data(i.coord.getLongitude(),i.coord.getLatitude()));
-        }
-
-        sc.getData().addAll(valTraces);
-        Scene scene = new Scene(sc,1000,600);
-        stage.setScene(scene);
-        stage.show();
-    }
 }
