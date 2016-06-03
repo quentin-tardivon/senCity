@@ -29,6 +29,15 @@ public class GPS {
         this.longitude = longitude;
     }
 
+    public boolean equals(GPS gps) {
+        if (this.latitude == gps.latitude && this.longitude==gps.longitude) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
     @Override
     public String toString() {
         return this.getLatitude()+" "+this.getLongitude();

@@ -14,18 +14,25 @@ import java.util.Scanner;
 public abstract class Traces extends AbstractTraces implements Iterable<Trace> {
 
     Collection<Trace> listeTrace;
+    int taille = 0;
 
     /**
      * Ajoute une trace à la liste
      * @param trace la trace à ajouter
      */
     public void ajouter(Trace trace) {
+        this.taille +=1;
         this.listeTrace.add(trace);
     }
 
-    public Trace retirer(Trace trace) {
-        this.listeTrace.remove(trace);
-        return trace;
+    public void retirer(Trace trace) {
+        for (Trace i: listeTrace) {
+            if (trace.coord.equals(i.coord) && trace.signal == i.signal && trace.ssid.equals(i.ssid)) {
+                listeTrace.remove(i);
+                break;
+            }
+        }
+        this.taille = taille -1;
     }
 
     /**
@@ -33,7 +40,7 @@ public abstract class Traces extends AbstractTraces implements Iterable<Trace> {
      * @return la taille de la liste de trace
      */
     public int taille() {
-        return this.listeTrace.size();
+        return taille;
     }
 
 

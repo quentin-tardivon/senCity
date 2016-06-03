@@ -23,5 +23,13 @@ public class Trace {
         return result;
     }
 
+    public boolean equals(Trace trace) {
+        if (this.ts.equals(trace.ts) && this.ssid.equals(trace.ssid) && this.signal == trace.signal && this.coord.equals(trace.coord)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 
 }
