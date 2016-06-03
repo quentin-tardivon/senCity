@@ -26,7 +26,12 @@ public abstract class Traces extends AbstractTraces implements Iterable<Trace> {
     }
 
     public void retirer(Trace trace) {
-        this.listeTrace.remove(trace);
+        for (Trace i: listeTrace) {
+            if (trace.coord.equals(i.coord) && trace.signal == i.signal && trace.ssid.equals(i.ssid)) {
+                listeTrace.remove(i);
+                break;
+            }
+        }
         this.taille = taille -1;
     }
 

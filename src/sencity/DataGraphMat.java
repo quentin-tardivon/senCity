@@ -143,62 +143,15 @@ public class DataGraphMat {
         return surface;
     }
 
-    public Traces dijkstra(Trace depart, Trace destination) {
-        if (!this.existeSommet(depart)) {
-            System.out.println("Le départ n'existe pas!");
-            return null;
-        }
-        final Traces marquage = new ArrayListTraces();
-        final Double[] dist = new Double[listeSommet.size()];
-        final Traces[] chemin = new Traces[listeSommet.size()];
-        for (int i=0; i <listeSommet.size(); i++) {
-            dist[i] = 100000.0;
-            chemin[i] = new ArrayListTraces();
-        }
-        dist[listeSommet.indexOf(depart)] = 0.0;
-        chemin[listeSommet.indexOf(depart)].ajouter(depart);
-
-        marquage.ajouter(depart);
-
-        while (marquage.taille() != 0) {
-            System.out.println(dist[listeSommet.indexOf(destination)]);
-            System.out.println(marquage.taille());
-            Trace x = enleverMin(dist,marquage);
-            System.out.println("X = " + x.toString());
-            System.out.println("destination = " + destination.toString());
-            if (x.equals(destination)) {
-                //return dist[listeSommet.indexOf(destination)];
-                return chemin[listeSommet.indexOf(destination)];
-            }
-            for (int i=0;i<listeSommet.size(); i++) {
-                if (existArc(listeSommet.indexOf(x), i)) {
-                   this.miseAJour(listeSommet.get(i),x,marquage,dist,chemin);
-                }
+    public Traces voisins(Trace trace) {
+        Traces result = new ArrayListTraces();
+        int i = listeSommet.indexOf(trace);
+        for (int j = 0; j<matriceArc.length; j++) {
+            if (matriceArc[i][j]) {
+                result.ajouter(listeSommet.get(j));
             }
         }
-        return null;
+        return result;
     }
 
-    public void miseAJour(Trace y, Trace x, Traces marquage, Double[] dist, Traces[] chemin) {
-        if (dist[listeSommet.indexOf(y)] > dist[listeSommet.indexOf(x)] + distance(x.coord,y.coord)) {
-            dist[listeSommet.indexOf(y)] = dist[listeSommet.indexOf(x)] + distance(x.coord,y.coord);
-            chemin[listeSommet.indexOf(y)].ajouter(x);
-            System.out.println("Ajout");
-            System.out.println(y.toString());
-            marquage.ajouter(y);
-        }
-    }
-
-    public Trace enleverMin(Double[] dist, Traces marquage) {
-        Double min = 1000000.0;
-        int indiceMin = -1;
-        for (int i=0; i<dist.length; i++) {
-            if (dist[i] < min) {
-                min = dist[i];
-                indiceMin = i;
-            }
-        }
-        marquage.retirer(listeSommet.get(indiceMin));
-        return listeSommet.get(indiceMin);
-    }
 }

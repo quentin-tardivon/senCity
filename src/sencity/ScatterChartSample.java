@@ -70,12 +70,13 @@ public class ScatterChartSample extends Application {
         for (Trace i: GraphDeTest.dijkstra(trace1,trace2)) {
             valTraces.getData().add(new XYChart.Data(i.coord.getLongitude()*1,i.coord.getLatitude()*1));
         }*/
-        GraphDeTest.dijkstra(trace1,trace2).toString();
         sc.getData().addAll(valTraces);
 
         Scene scene = new Scene(sc,500,400);
         stage.setScene(scene);
         stage.show();
+
+
     }
 
     public static void main(String[] args) {
