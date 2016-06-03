@@ -44,7 +44,7 @@ public class DataGraphMat {
         pourcentage = traceGraphe/traceTotal * 100.0;
     }
 
-    public Collection<Trace> getListeSommet() {
+    public ArrayList<Trace> getListeSommet() {
         return listeSommet;
     }
 
@@ -143,7 +143,7 @@ public class DataGraphMat {
         return surface;
     }
 
-    public Traces dijkstra(Trace depart, Trace destination) {
+    /*public Traces dijkstra(Trace depart, Trace destination) {
         if (!this.existeSommet(depart)) {
             System.out.println("Le départ n'existe pas!");
             return null;
@@ -151,9 +151,8 @@ public class DataGraphMat {
         final Traces marquage = new ArrayListTraces();
         final Double[] dist = new Double[listeSommet.size()];
         final Traces[] chemin = new Traces[listeSommet.size()];
-        for (int i=0; i <listeSommet.size(); i++) {
-            dist[i] = 100000.0;
-            chemin[i] = new ArrayListTraces();
+        for (int i=0; i <dist.length; i++) {
+            dist[i] = Double.MAX_VALUE;
         }
         dist[listeSommet.indexOf(depart)] = 0.0;
         chemin[listeSommet.indexOf(depart)].ajouter(depart);
@@ -193,5 +192,5 @@ public class DataGraphMat {
             }
         }
         return marquage.retirer(listeSommet.get(indiceMin));
-    }
+    }*/
 }
