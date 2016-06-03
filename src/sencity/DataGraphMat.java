@@ -44,7 +44,7 @@ public class DataGraphMat {
         pourcentage = traceGraphe/traceTotal * 100.0;
     }
 
-    public Collection<Trace> getListeSommet() {
+    public ArrayList<Trace> getListeSommet() {
         return listeSommet;
     }
 

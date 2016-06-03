@@ -19,7 +19,8 @@ public class ScatterChartSample extends Application {
         TreeTraces trace_capture = new TreeTraces();
         try {
             double time = System.currentTimeMillis();
-            trace_capture.load("capture_wifi.csv", "capture_gps.csv",20.0);
+            //trace_capture.load("capture_wifi.csv", "capture_gps.csv",20.0);
+            trace_capture.load("capture_wifi_2.csv", "capture_gps_2.csv",20.0);
             System.out.println(System.currentTimeMillis() - time);
         }
         catch(IOException exception) {
@@ -33,8 +34,10 @@ public class ScatterChartSample extends Application {
         System.out.println(extract_ssid.toString());
 
         stage.setTitle("Couverture réseau");
-        NumberAxis xAxis = new NumberAxis(6.15,6.16,0.001);
-        NumberAxis yAxis = new NumberAxis(48.666,48.671,0.001);
+        /*NumberAxis xAxis = new NumberAxis(6.154,6.157,0.001);
+        NumberAxis yAxis = new NumberAxis(48.668,48.670,0.001);*/
+        NumberAxis xAxis = new NumberAxis(6.153, 6.170, 0.0001);
+        NumberAxis yAxis = new NumberAxis(48.669, 48.680, 0.00001);
         ScatterChart<Number,Number> sc = new ScatterChart<Number,Number>(xAxis,yAxis);
         xAxis.setLabel("Longitude");
         yAxis.setLabel("Latitude");
@@ -42,41 +45,34 @@ public class ScatterChartSample extends Application {
 
         /*Collection<Traces> extract_all = trace_capture.extractAll("");
         for (Traces i : extract_all) {
-            DataGraphMat GraphDeTest = new DataGraphMat(i,10,90.0);
+            //DataGraphMat GraphDeTest = new DataGraphMat(i,10,90.0);
             XYChart.Series valTraces = new XYChart.Series();
             for (Trace j : i) {
-                valTraces.getData().add(new XYChart.Data(j.coord.getLongitude()*1,j.coord.getLatitude()*1));
+                valTraces.getData().add(new XYChart.Data(j.coord.getLongitude(),j.coord.getLatitude()));
             }
             sc.getData().addAll(valTraces);
         }*/
 
 
-        DataGraphMat GraphDeTest = new DataGraphMat(extract_ssid2,10,190.0);
+        DataGraphMat GraphDeTest = new DataGraphMat(extract_ssid,10,90.0);
         XYChart.Series valTraces = new XYChart.Series();
-        int indiceI = 0;
-        Trace trace1 = null;
-        Trace trace2 = null;
         for (Trace i: GraphDeTest.getListeSommet()) {
-            indiceI += 1;
             valTraces.getData().add(new XYChart.Data(i.coord.getLongitude()*1,i.coord.getLatitude()*1));
-            if (indiceI == 1) {
-                trace1 = i;
-            }
-            else if(indiceI == 2) {
-                trace2 = i;
-            }
-        }
-        /*XYChart.Series valTraces2 = new XYChart.Series();
-        for (Trace i: GraphDeTest.dijkstra(trace1,trace2)) {
-            valTraces.getData().add(new XYChart.Data(i.coord.getLongitude()*1,i.coord.getLatitude()*1));
-        }*/
         sc.getData().addAll(valTraces);
+        }
+
+        DataGraphMat GraphDeTest2 = new DataGraphMat(extract_ssid2,10,90.0);
+        XYChart.Series valTraces2 = new XYChart.Series();
+        for (Trace i: GraphDeTest2.getListeSommet()) {
+            valTraces2.getData().add(new XYChart.Data(i.coord.getLongitude()*1,i.coord.getLatitude()*1));
+            sc.getData().addAll(valTraces2);
+        }
+
+
 
         Scene scene = new Scene(sc,500,400);
         stage.setScene(scene);
         stage.show();
-
-
     }
 
     public static void main(String[] args) {
