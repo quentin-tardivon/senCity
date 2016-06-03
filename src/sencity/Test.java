@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.StringJoiner;
@@ -12,7 +13,7 @@ public class Test {
 	
 
 	public static void main(String[] args) {
-		testGraphData();
+		//testGraphData();
 		//testPartialExtractTreeTraces();
 		//testExtractTreeTraces();
 		//testExtractArray();
@@ -20,6 +21,7 @@ public class Test {
 		//testExtractHashMapTraces();
 		//testLinkedList();
 		//testHashMapTraces();
+		testDijsktra();
 	}
 
 	public void testTrace() {
@@ -336,5 +338,38 @@ public class Test {
 		System.out.println(GraphDeTest.getPourcentage());
 		System.out.println(GraphDeTest.surfaceReseau());
 	}
+
+	public static void testDijsktra() {
+		System.out.println("Test Dijsktra");
+		TreeTraces trace_capture = new TreeTraces();
+		try {
+			double time = System.currentTimeMillis();
+			trace_capture.load("capture_wifi.csv", "capture_gps.csv", 20.0);
+			System.out.println(System.currentTimeMillis() - time);
+		} catch (IOException exception) {
+			System.out.println("Fichier introuvable");
+		}
+		double time = System.currentTimeMillis();
+		Traces extract_ssid = trace_capture.extract("eduroam");
+		System.out.println(System.currentTimeMillis() - time);
+		System.out.println(extract_ssid.toString());
+		DataGraphMat GraphDeTest = new DataGraphMat(extract_ssid, 10, 40.0);
+		Dijkstra testDij = new Dijkstra();
+		ArrayList<Integer> result = GraphDeTest.afficheChemin(GraphDeTest,GraphDeTest.dijkstra(GraphDeTest, 1),1,600);
+		Traces cheminCourt = new LinkedListTraces();
+
+
+		System.out.println(GraphDeTest.getListeSommet().get(479).toString());
+
+		for (int i=0; i<result.size();i++) {
+			Integer indice = result.get(i);
+			System.out.println(indice);
+			cheminCourt.ajouter(GraphDeTest.getListeSommet().get(indice));
+		}
+
+		System.out.println(cheminCourt.toString());
+
+	}
+
 
 }

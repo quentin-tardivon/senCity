@@ -143,15 +143,82 @@ public class DataGraphMat {
         return surface;
     }
 
-    public Traces voisins(Trace trace) {
-        Traces result = new ArrayListTraces();
-        int i = listeSommet.indexOf(trace);
-        for (int j = 0; j<matriceArc.length; j++) {
+    public int[] voisins(int i) {
+        int[] result = new int[listeSommet.size()];
+        int indice = 0;
+        for (int j = 0; j<listeSommet.size(); j++) {
             if (matriceArc[i][j]) {
-                result.ajouter(listeSommet.get(j));
+                result[indice]=j;
+                indice+=1;
             }
         }
+        result[indice] = -1;
         return result;
     }
+    public static int[] dijkstra(DataGraphMat G, int depart) {
+        /*if (!this.existeSommet(depart)) {
+            System.out.println("Le départ n'existe pas!");
+            return null;
+        }*/
+
+        final Double[] chemin = new Double[G.getListeSommet().size()];
+        final boolean[] marquage = new boolean[G.getListeSommet().size()];
+        final int[] predecesseur = new int[(G.getListeSommet().size())];
+
+        for (int i = 0; i < chemin.length; i++) {
+            chemin[i] = Double.MAX_VALUE;
+
+        }
+        chemin[depart] = 0.0;
+
+        for (int i = 0; i < chemin.length; i++) {
+            final int suivant = minVertex(chemin,marquage);
+            if (suivant == -1) {
+                return predecesseur;
+            }
+
+            marquage[suivant] = true;
+
+            final int[] n = G.voisins(suivant);
+            int j = 0;
+            while (n[j] != -1) {
+                final int v = n[j];
+                //System.out.println(n.length);
+                final Double d = chemin[suivant] + G.distance(G.getListeSommet().get(suivant).coord, G.getListeSommet().get(v).coord);
+                if (chemin[v] > d) {
+                    chemin[v] = d;
+                    predecesseur[v] = suivant;
+                }
+                j+=1;
+            }
+        }
+        return predecesseur;
+    }
+
+
+    private static int minVertex(Double[] chemin, boolean[] marquage) {
+        Double x = Double.MAX_VALUE;
+        int y = -1;
+        for (int i = 0; i < chemin.length; i++) {
+            if (!marquage[i] && chemin[i] < x) {
+                y = i;
+                x = chemin[i];
+            }
+        }
+        return y;
+    }
+
+    public static ArrayList<Integer> afficheChemin(DataGraphMat G, int[] pred, int dep, int arrivee) {
+        final ArrayList<Integer> chemin = new ArrayList<Integer>();
+        int x = arrivee;
+        while (x != dep) {
+            chemin.add(0, x);
+            x = pred[x];
+        }
+        chemin.add(0,dep);
+        System.out.println(chemin);
+        return chemin;
+    }
+
 
 }
