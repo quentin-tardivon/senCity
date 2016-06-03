@@ -61,5 +61,16 @@ public abstract class Traces extends AbstractTraces implements Iterable<Trace> {
 
     public abstract Traces extract(String ssid);
 
+    public Trace get(int i) {
+        int indiceI = 0;
+        for (Trace j : listeTrace) {
+            if (indiceI == i) {
+                return j;
+            }
+            indiceI +=1;
+        }
+        return null;
+    }
+
 
 }

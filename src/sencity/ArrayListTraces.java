@@ -10,13 +10,14 @@ import java.util.Collection;
  */
 public class ArrayListTraces extends Traces{
 
+
     public ArrayListTraces() {
         initialiser();
     }
 
     @Override
-    public Collection<Trace> initialiser() {
-        listeTrace = new ArrayList<>();
+    public ArrayList<Trace> initialiser() {
+        ArrayList listeTrace = new ArrayList<>();
         return listeTrace;
     }
 
@@ -30,5 +31,7 @@ public class ArrayListTraces extends Traces{
         }
         return result;
     }
+
+
 }
 
