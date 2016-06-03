@@ -5,7 +5,7 @@ package sencity;
  */
 public class Dijkstra {
 
-    public static Trace[] dijkstra(DataGraphMat G, Trace depart) {
+    public static ArrayListTraces dijkstra(DataGraphMat G, Trace depart) {
         /*if (!this.existeSommet(depart)) {
             System.out.println("Le départ n'existe pas!");
             return null;
@@ -13,7 +13,7 @@ public class Dijkstra {
 
         final Double[] chemin = new Double[G.getListeSommet().size()];
         final boolean[] marquage = new boolean[G.getListeSommet().size()];
-        final Trace[] predecesseur = new Trace[G.getListeSommet().size()];
+        final ArrayListTraces predecesseur = new ArrayListTraces();
 
         for (int i = 0; i < chemin.length; i++) {
             chemin[i] = Double.MAX_VALUE;
@@ -24,13 +24,13 @@ public class Dijkstra {
             final Trace suivant = G.getListeSommet().get(minVertex(chemin, marquage));
             marquage[G.getListeSommet().indexOf(suivant)] = true;
 
-            final Trace[] n = G.voisins(suivant);
-            for (int j = 0; j < n.length; j++) {
-                final Trace v = n[j];
+            final Traces n = G.voisins(suivant);
+            for (int j = 0; j < n.taille(); j++) {
+                final Trace v = n[j]; //
                 final Double d = chemin[G.getListeSommet().indexOf(suivant)] + G.distance(suivant.coord, v.coord);
                 if (chemin[G.getListeSommet().indexOf(v)] > d) {
                     chemin[G.getListeSommet().indexOf(v)] = d;
-                    predecesseur[G.getListeSommet().indexOf(v)] = suivant;
+                    predecesseur[G.getListeSommet().indexOf(v)] = suivant; //
                 }
             }
         }

@@ -15,8 +15,8 @@ public class ArrayListTraces extends Traces{
     }
 
     @Override
-    public Collection<Trace> initialiser() {
-        listeTrace = new ArrayList<>();
+    public ArrayList<Trace> initialiser() {
+        ArrayList listeTrace = new ArrayList<>();
         return listeTrace;
     }
 

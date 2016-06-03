@@ -43,7 +43,7 @@ public class ScatterChartSample extends Application {
         yAxis.setLabel("Latitude");
         sc.setTitle("Couverture Réseau");
 
-        Collection<Traces> extract_all = trace_capture.extractAll("");
+        /*Collection<Traces> extract_all = trace_capture.extractAll("");
         for (Traces i : extract_all) {
             //DataGraphMat GraphDeTest = new DataGraphMat(i,10,90.0);
             XYChart.Series valTraces = new XYChart.Series();
@@ -51,15 +51,23 @@ public class ScatterChartSample extends Application {
                 valTraces.getData().add(new XYChart.Data(j.coord.getLongitude(),j.coord.getLatitude()));
             }
             sc.getData().addAll(valTraces);
-        }
+        }*/
 
 
-        /*DataGraphMat GraphDeTest = new DataGraphMat(extract_ssid2,10,90.0);
+        DataGraphMat GraphDeTest = new DataGraphMat(extract_ssid,10,90.0);
         XYChart.Series valTraces = new XYChart.Series();
         for (Trace i: GraphDeTest.getListeSommet()) {
             valTraces.getData().add(new XYChart.Data(i.coord.getLongitude()*1,i.coord.getLatitude()*1));
         sc.getData().addAll(valTraces);
-        }*/
+        }
+
+        DataGraphMat GraphDeTest2 = new DataGraphMat(extract_ssid2,10,90.0);
+        XYChart.Series valTraces2 = new XYChart.Series();
+        for (Trace i: GraphDeTest2.getListeSommet()) {
+            valTraces2.getData().add(new XYChart.Data(i.coord.getLongitude()*1,i.coord.getLatitude()*1));
+            sc.getData().addAll(valTraces2);
+        }
+
 
 
         Scene scene = new Scene(sc,500,400);
