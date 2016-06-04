@@ -1,7 +1,7 @@
 package sencity;
 
-import java.lang.reflect.Array;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 
 /**
@@ -155,15 +155,15 @@ public class DataGraphMat {
         result[indice] = -1;
         return result;
     }
-    public static int[] dijkstra(DataGraphMat G, int depart) {
+    public int[] dijkstra(int depart) {
         /*if (!this.existeSommet(depart)) {
             System.out.println("Le départ n'existe pas!");
             return null;
         }*/
 
-        final Double[] chemin = new Double[G.getListeSommet().size()];
-        final boolean[] marquage = new boolean[G.getListeSommet().size()];
-        final int[] predecesseur = new int[(G.getListeSommet().size())];
+        final Double[] chemin = new Double[this.getListeSommet().size()];
+        final boolean[] marquage = new boolean[this.getListeSommet().size()];
+        final int[] predecesseur = new int[(this.getListeSommet().size())];
 
         for (int i = 0; i < chemin.length; i++) {
             chemin[i] = Double.MAX_VALUE;
@@ -179,12 +179,12 @@ public class DataGraphMat {
 
             marquage[suivant] = true;
 
-            final int[] n = G.voisins(suivant);
+            final int[] n = this.voisins(suivant);
             int j = 0;
             while (n[j] != -1) {
                 final int v = n[j];
                 //System.out.println(n.length);
-                final Double d = chemin[suivant] + G.distance(G.getListeSommet().get(suivant).coord, G.getListeSommet().get(v).coord);
+                final Double d = chemin[suivant] + this.distance(this.getListeSommet().get(suivant).coord, this.getListeSommet().get(v).coord);
                 if (chemin[v] > d) {
                     chemin[v] = d;
                     predecesseur[v] = suivant;
@@ -208,7 +208,7 @@ public class DataGraphMat {
         return y;
     }
 
-    public static ArrayList<Integer> afficheChemin(DataGraphMat G, int[] pred, int dep, int arrivee) {
+    public static ArrayList<Integer> afficheChemin(int[] pred, int dep, int arrivee) throws Exception{
         final ArrayList<Integer> chemin = new ArrayList<Integer>();
         int x = arrivee;
         while (x != dep) {

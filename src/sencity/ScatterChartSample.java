@@ -9,12 +9,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 
 
 public class ScatterChartSample extends Application {
 
-    @Override public void start(Stage stage) {
+    @Override public void start(Stage stage) throws Exception {
+
 
         System.out.println("Extract GraphData");
         TreeTraces trace_capture = new TreeTraces();
@@ -60,7 +60,7 @@ public class ScatterChartSample extends Application {
         XYChart.Series valTraces = new XYChart.Series();
 
         Dijkstra testDij = new Dijkstra();
-        ArrayList<Integer> result = GraphDeTest.afficheChemin(GraphDeTest,GraphDeTest.dijkstra(GraphDeTest, 1),1,600);
+        ArrayList<Integer> result = GraphDeTest.afficheChemin(GraphDeTest.dijkstra(1),1,600);
         Traces cheminCourt = new LinkedListTraces();
 
 
@@ -96,6 +96,7 @@ public class ScatterChartSample extends Application {
 
 
         Scene scene = new Scene(sc,500,400);
+        scene.getStylesheets().add("./Chart.css");
         stage.setScene(scene);
         stage.show();
     }

@@ -1,0 +1,5 @@
+.chart-symbol{
+    -fx-stroke: #1a00e2;
+    -fx-background-radius: 3px;
+    -fx-padding: 3px;
+}

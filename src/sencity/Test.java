@@ -4,10 +4,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Scanner;
-import java.util.StringJoiner;
 
 public class Test {
 	
@@ -350,24 +348,35 @@ public class Test {
 			System.out.println("Fichier introuvable");
 		}
 		double time = System.currentTimeMillis();
-		Traces extract_ssid = trace_capture.extract("eduroam");
+		Traces extract_ssid = trace_capture.extract("Universite de Lorraine");
 		System.out.println(System.currentTimeMillis() - time);
 		System.out.println(extract_ssid.toString());
-		DataGraphMat GraphDeTest = new DataGraphMat(extract_ssid, 10, 40.0);
+		DataGraphMat GraphDeTest = new DataGraphMat(extract_ssid, 10, 5.0);
 		Dijkstra testDij = new Dijkstra();
-		ArrayList<Integer> result = GraphDeTest.afficheChemin(GraphDeTest,GraphDeTest.dijkstra(GraphDeTest, 1),1,600);
-		Traces cheminCourt = new LinkedListTraces();
+		try {
+			int[] result = GraphDeTest.dijkstra(1);
+			//ArrayList<Integer> result2 = GraphDeTest.afficheChemin(result,1,347);
+
+			for (int i = 0; i<result.length;i++) {
+				System.out.println(i + " " + result[i]);
+			}
+			Traces cheminCourt = new LinkedListTraces();
 
 
-		System.out.println(GraphDeTest.getListeSommet().get(479).toString());
+			System.out.println(GraphDeTest.getListeSommet().get(479).toString());
 
-		for (int i=0; i<result.size();i++) {
-			Integer indice = result.get(i);
-			System.out.println(indice);
-			cheminCourt.ajouter(GraphDeTest.getListeSommet().get(indice));
+			/*for (int i=0; i<result2.size();i++) {
+				Integer indice = result2.get(i);
+				System.out.println(indice);
+				cheminCourt.ajouter(GraphDeTest.getListeSommet().get(indice));
+			}
+
+			System.out.println(cheminCourt.toString());*/
+		}
+		catch (Exception exception) {
+			System.out.println("Impossible de trouver un chemin");
 		}
 
-		System.out.println(cheminCourt.toString());
 
 	}
 
