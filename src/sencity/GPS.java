@@ -5,8 +5,8 @@ package sencity;
  */
 
 public class GPS {
-    protected Double longitude;
-    protected Double latitude;
+    protected double longitude;
+    protected double latitude;
 
     public GPS(Double latitude, Double longitude) {
         this.longitude = longitude;
@@ -30,7 +30,7 @@ public class GPS {
     }
 
     public boolean equals(GPS gps) {
-        if (this.latitude == gps.latitude && this.longitude==gps.longitude) {
+        if (this.latitude == gps.latitude && this.longitude == gps.longitude) {
             return true;
         }
         else {
