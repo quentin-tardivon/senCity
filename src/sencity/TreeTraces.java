@@ -2,7 +2,6 @@ package sencity;
 
 
 import java.util.LinkedList;
-import java.util.List;
 
 /**
  * Created by quentin on 5/13/16.
@@ -100,7 +99,7 @@ public class TreeTraces extends AbstractTraces {
     }
 
     public void recursExtract(Node noeud,LinkedList<Traces> result) {
-        if (noeud.getListetraces() != null) {
+        if (noeud.getListetraces()!=null && noeud.getListetraces().toString() != "") {
             result.add(noeud.getListetraces());
         }
         if (noeud.getBrother() != null) {

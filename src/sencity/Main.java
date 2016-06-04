@@ -72,11 +72,14 @@ public class Main extends Application {
                 LinkedList<Traces> extract_ssid = trace_capture.extractAll(reponse);
                 System.out.println(extract_ssid.toString());
                 Traces resultat = new LinkedListTraces();
+                int nbSsid = 0;
                 for (Traces i : extract_ssid) {
+                    nbSsid+=1;
                     for (Trace j : i) {
                         resultat.ajouter(j);
                     }
                 }
+                System.out.println("Nombre de ssid extraits: " + nbSsid);
                 listeTitre.add(reponse);
                 listeResultats.add(resultat);
             }
@@ -102,6 +105,7 @@ public class Main extends Application {
                     Traces extract_ssid = trace_capture.extract(reponse21);
                     System.out.println(extract_ssid.toString());
                     DataGraphMat dataGraph = new DataGraphMat(extract_ssid,seuilSignal,seuilDistance);
+                    System.out.println("Pourcentage de traces conservées: " + dataGraph.getPourcentage());
 
 
                     System.out.println("Latitude du point1?");
@@ -154,7 +158,9 @@ public class Main extends Application {
                     int quit2 = 0;
                     Traces extract_ssid = new LinkedListTraces();
                     String titre = "";
+                    int nbSsid = 0;
                     while (quit2 == 0) {
+                        nbSsid+=1;
                         System.out.println("Nom du ssid à extraire?");
                         Scanner reponse2 = new Scanner(System.in);
                         String reponse21 = reponse2.nextLine();
@@ -178,6 +184,8 @@ public class Main extends Application {
                     double seuilDistance = Double.parseDouble(reponse31);
                     System.out.println(extract_ssid.toString());
                     DataGraphMat dataGraph = new DataGraphMat(extract_ssid,seuilSignal,seuilDistance);
+                    System.out.println("Pourcentage de traces conservées: " + dataGraph.getPourcentage());
+                    System.out.println("Nombre de ssid extraits: " + nbSsid);
                     System.out.println("Latitude du point1?");
                     reponse1 = new Scanner(System.in);
                     Double lat1 = Double.parseDouble(reponse1.nextLine());
@@ -238,13 +246,17 @@ public class Main extends Application {
                     double seuilDistance = Double.parseDouble(reponse31);
                     LinkedList<Traces> partialExtract = trace_capture.extractAll("");
                     Traces extract_ssid = new LinkedListTraces();
+                    int nbSsid = 0;
                     for (Traces i : partialExtract) {
+                        nbSsid+=1;
                         for (Trace j : i) {
                             extract_ssid.ajouter(j);
                         }
                     }
                     System.out.println(extract_ssid.toString());
                     DataGraphMat dataGraph = new DataGraphMat(extract_ssid,seuilSignal,seuilDistance);
+                    System.out.println("Pourcentage de traces conservées: " + dataGraph.getPourcentage());
+                    System.out.println("Nombre de ssid extraits: " + nbSsid);
 
 
                     System.out.println("Latitude du point1?");
