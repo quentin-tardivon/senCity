@@ -18,6 +18,12 @@ public class DataGraphMat {
         initialiser(traces, seuilSignal, seuilDistance);
     }
 
+    /**
+     *
+     * @param traces
+     * @param seuilSignal
+     * @param seuilDistance
+     */
     public void initialiser(Traces traces, int seuilSignal, Double seuilDistance) {
         Double traceTotal = 0.0;
         Double traceGraphe = 0.0;
@@ -78,6 +84,13 @@ public class DataGraphMat {
         listeSommet.add(sommet);
     }
 
+    /**
+     * calcule et renvoie la distance en mètres entre 2 points GPS
+     * formule : S = R * arccos ( sin(φA) * sin(φB) + cos(φA)*cos(φB)*cos(dλ) )
+     * @param point1
+     * @param point2
+     * @return la distance en mètre
+     */
     public Double distance(GPS point1, GPS point2) {
         return 6378137 * Math.acos(Math.sin(Math.toRadians(point1.getLatitude())) * Math.sin(Math.toRadians(point2.getLatitude())) + (Math.cos(Math.toRadians(point1.getLatitude())) * Math.cos(Math.toRadians(point2.getLatitude())) * Math.cos(Math.toRadians(point2.getLongitude()) - Math.toRadians(point1.getLongitude()))));
     }
@@ -143,6 +156,12 @@ public class DataGraphMat {
         return surface;
     }
 
+    /**
+     * Pour le sommet i donné, parcours toutes les colonnes et pour chaque voisin de i (matrice[i][j]==true) ajoute le
+     * sommet correspondant à result
+     * @param i numero de la ligne, c'est à dire numero du sommet de départ
+     * @retur int[] result contenant la liste des voisins de i et -1 en dernier élément
+     */
     public int[] voisins(int i) {
         int[] result = new int[listeSommet.size()];
         int indice = 0;
@@ -155,6 +174,12 @@ public class DataGraphMat {
         result[indice] = -1;
         return result;
     }
+
+    /**
+     * Algorithme de dijkstra, calcule tous les plus court chemins chemins à partir de depart.
+     * @param depart sommet de départ de l'algorithme
+     * @return int[] predecesseur  : liste des sommet atteignable depuis depart
+     */
     public int[] dijkstra(int depart) {
         /*if (!this.existeSommet(depart)) {
             System.out.println("Le départ n'existe pas!");
@@ -195,7 +220,12 @@ public class DataGraphMat {
         return predecesseur;
     }
 
-
+    /**
+     * renvoie le sommet correspondant a la plus petite distance
+     * @param chemin chemin potentiel à évaluer
+     * @param marquage liste de sommet deja parcouru
+     * @return sommet correspondant au pus court chemin
+     */
     private static int minVertex(Double[] chemin, boolean[] marquage) {
         Double x = Double.MAX_VALUE;
         int y = -1;
@@ -208,7 +238,16 @@ public class DataGraphMat {
         return y;
     }
 
-    public static ArrayList<Integer> afficheChemin(int[] pred, int dep, int arrivee) throws Exception{
+    /**
+     * parcours la liste des prédécesseurs en partant du sommet d'arrivée et ajoute ses prédécesseurs tant qu'il
+     * n'a pas atteint le sommet de départ
+     * @param pred resultat de la fonction dijkstra
+     * @param dep sommet de départ
+     * @param arrivee sommet d'arrivée
+     * @return affiche la liste des sommets correspondant au plus court chemin entre les sommet de départ de le sommet
+     * d'arrivée
+     */
+    public static ArrayList<Integer> afficheChemin(int[] pred, int dep, int arrivee){
         final ArrayList<Integer> chemin = new ArrayList<Integer>();
         int x = arrivee;
         while (x != dep) {

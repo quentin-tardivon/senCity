@@ -8,6 +8,12 @@ public class Arc {
     private Trace sommet2;
     private Double distance;
 
+    /**
+     * Un arc effectue la liaison entre 2 sommets et est valué par la distance entre ces sommets, non orienté
+     * @param sommet1 Trace correspondant au sommet 1
+     * @param sommet2 Trace correspondant au sommet 2
+     * @param distance distance en mètres entre sommet1 et sommet2
+     */
     public Arc(Trace sommet1, Trace sommet2, Double distance) {
         this.sommet1 = sommet1;
         this.sommet2 = sommet2;

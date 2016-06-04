@@ -9,19 +9,25 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 
 
 public class ScatterChartSample extends Application {
 
+    /**
+     * effectue l'affichage de la couverture réseau en utilisant les librairies JavaFX
+     * charge les données des fichiers de données, configure les paramètres du graphiques (titre, axes ...) puis
+     * affiche le graph (gradué en latitude/longitude)  des coordonnées filtrées en puissance et distance
+     * @param stage fenetre d'affichage du graphique
+     * @throws Exception Si le fichier est introuvable
+     */
     @Override public void start(Stage stage) throws Exception {
-
-
         System.out.println("Extract GraphData");
         TreeTraces trace_capture = new TreeTraces();
         try {
             double time = System.currentTimeMillis();
             trace_capture.load("capture_wifi.csv", "capture_gps.csv",20.0);
-            //trace_capture.load("capture_wifi_2.csv", "capture_gps_2.csv",20.0);
+            //trace_capture.load("capture_wifi_2.csv", "capture_gps_2.csv",40.0);
             System.out.println(System.currentTimeMillis() - time);
         }
         catch(IOException exception) {
@@ -56,17 +62,17 @@ public class ScatterChartSample extends Application {
         }*/
 
 
-        DataGraphMat GraphDeTest = new DataGraphMat(extract_ssid,10,20.0);
+        /*DataGraphMat GraphDeTest = new DataGraphMat(extract_ssid,10,20.0);
         XYChart.Series valTraces = new XYChart.Series();
 
         Dijkstra testDij = new Dijkstra();
         ArrayList<Integer> result = GraphDeTest.afficheChemin(GraphDeTest.dijkstra(1),1,600);
-        Traces cheminCourt = new LinkedListTraces();
+        Traces cheminCourt = new LinkedListTraces();*/
 
-
+        DataGraphMat GraphDeTest = new DataGraphMat(extract_ssid,10,20.0);
         System.out.println(GraphDeTest.getListeSommet().get(479).toString());
 
-        for (int i=0; i<result.size();i++) {
+        /*for (int i=0; i<result.size();i++) {
             Integer indice = result.get(i);
             System.out.println(indice);
             cheminCourt.ajouter(GraphDeTest.getListeSommet().get(indice));
@@ -83,15 +89,14 @@ public class ScatterChartSample extends Application {
             valTraces2.getData().add(new XYChart.Data(i.coord.getLongitude()*1,i.coord.getLatitude()*1));
 
         }
-        sc.getData().addAll(valTraces2);
+        sc.getData().addAll(valTraces2);*/
 
-        /*DataGraphMat GraphDeTest3 = new DataGraphMat(extract_ssid3,10,90.0);
-        XYChart.Series valTraces3 = new XYChart.Series();
-        for (Trace i: GraphDeTest3.getListeSommet()) {
-            valTraces3.getData().add(new XYChart.Data(i.coord.getLongitude()*1,i.coord.getLatitude()*1));
+        XYChart.Series valTraces = new XYChart.Series();
+        for (Trace i: extract_ssid) {
+            valTraces.getData().add(new XYChart.Data(i.coord.getLongitude()*1,i.coord.getLatitude()*1));
 
         }
-        sc.getData().addAll(valTraces3);*/
+        sc.getData().addAll(valTraces);
 
 
 

@@ -12,14 +12,14 @@ public class Test {
 
 	public static void main(String[] args) {
 		//testGraphData();
-		//testPartialExtractTreeTraces();
+		testPartialExtractTreeTraces();
 		//testExtractTreeTraces();
 		//testExtractArray();
 		//testExtractLinkedList();
 		//testExtractHashMapTraces();
 		//testLinkedList();
 		//testHashMapTraces();
-		testDijsktra();
+		//testDijsktra();
 	}
 
 	public void testTrace() {
@@ -297,14 +297,14 @@ public class Test {
 		TreeTraces trace_capture = new TreeTraces();
 		try {
 			double time = System.currentTimeMillis();
-			trace_capture.load("capture_wifi.csv", "capture_gps.csv",20.0);
+			trace_capture.load("capture_wifi_2.csv", "capture_gps_2.csv",20.0);
 			System.out.println(System.currentTimeMillis() - time);
 		}
 		catch(IOException exception) {
 			System.out.println("Fichier introuvable");
 		}
 		double time = System.currentTimeMillis();
-		LinkedList<Traces> extract_ssid = trace_capture.extractAll("free");
+		LinkedList<Traces> extract_ssid = trace_capture.extractAll("");
 		System.out.println(System.currentTimeMillis() - time);
 		System.out.println(extract_ssid.toString());
 
@@ -352,7 +352,6 @@ public class Test {
 		System.out.println(System.currentTimeMillis() - time);
 		System.out.println(extract_ssid.toString());
 		DataGraphMat GraphDeTest = new DataGraphMat(extract_ssid, 10, 5.0);
-		Dijkstra testDij = new Dijkstra();
 		try {
 			int[] result = GraphDeTest.dijkstra(1);
 			//ArrayList<Integer> result2 = GraphDeTest.afficheChemin(result,1,347);
