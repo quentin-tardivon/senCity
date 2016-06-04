@@ -250,9 +250,11 @@ public class DataGraphMat {
     public static ArrayList<Integer> afficheChemin(int[] pred, int dep, int arrivee){
         final ArrayList<Integer> chemin = new ArrayList<Integer>();
         int x = arrivee;
-        while (x != dep) {
+        int existe = 0;
+        while (x != dep && existe < 20000) {
             chemin.add(0, x);
             x = pred[x];
+            existe+=1;
         }
         chemin.add(0,dep);
         System.out.println(chemin);
