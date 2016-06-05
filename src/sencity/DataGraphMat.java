@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class DataGraphMat {
 
     private ArrayList<Trace> listeSommet = new ArrayList();
-    private boolean[][] matriceArc = new boolean[20000][20000];
+    private boolean[][] matriceArc = new boolean[30000][30000];
 
     private Double pourcentage;
 
@@ -257,7 +257,6 @@ public class DataGraphMat {
             existe+=1;
         }
         chemin.add(0,dep);
-        System.out.println(chemin);
         return chemin;
     }
 

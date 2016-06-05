@@ -353,7 +353,7 @@ public class Main extends Application {
         }
         sc.getData().addAll(valTraces);
         Scene scene = new Scene(sc,500,400);
-        scene.getStylesheets().add("./Chart.css");
+        scene.getStylesheets().add("Chart.css");
         stage.setScene(scene);
     }
 
@@ -385,7 +385,7 @@ public class Main extends Application {
 
         sc.getData().addAll(valTraces,valTraces2);
         Scene scene = new Scene(sc,500,400);
-        scene.getStylesheets().add("./Chart.css");
+        scene.getStylesheets().add("Chart.css");
         stage.setScene(scene);
     }
 

@@ -74,6 +74,7 @@ public abstract class AbstractTraces {
             SElementWifi.close();
         }
         SLineWifi.close();
+        System.out.println("Nombre de traces ajoutées : "+nbReal);
         if (((nbTotal - nbReal) / nbTotal) * 100 > seuil) {
             throw new IOException();
         }
